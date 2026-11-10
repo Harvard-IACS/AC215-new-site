@@ -116,7 +116,9 @@ try {
     await expect(information).toContainText('15-minute team presentation');
     await expect(information).toContainText('Formaggio');
     await expect(information.locator('#course-topics-overview + p + ol > li')).toHaveCount(14);
-    await expect(information.getByRole('link', { name: 'Supplementary readings', exact: true })).toHaveAttribute('href', sitePath('/readings.html'));
+    const sectionLinks = await information.getByRole('navigation', { name: 'Course information sections' }).getByRole('link').evaluateAll(links => links.map(link => link.getAttribute('href')));
+    assert.ok(sectionLinks.every(href => href.startsWith('#')), 'Section menus must only scroll within the current page');
+    await expect(page.locator('.site-footer').getByRole('link', { name: 'Supplementary readings', exact: true })).toHaveAttribute('href', sitePath('/readings.html'));
     await information.getByRole('link', { name: 'Prerequisites', exact: true }).click();
     await expect(page.getByRole('heading', { name: 'Prerequisites', exact: true })).toBeInViewport();
     await expect(page.locator('.people-section a.person-name')).toHaveCount(10);

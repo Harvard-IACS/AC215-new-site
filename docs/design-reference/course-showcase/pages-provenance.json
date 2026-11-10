@@ -256,5 +256,12 @@
     "chat": "Full backend and chat source retained; Pages workflow explicitly disables chat and publishes only frontend/dist.",
     "source_license": "upstream-LICENSE.txt; Harvard-IACS/2026-AC215/LICENSE blob 0a7999d082b397cb3d253bf77d6f21e27bb7643a",
     "cutover": "New preview only. Existing 2026-AC215 Pages repository and its live address are unchanged."
+  },
+  "section_navigation": {
+    "updated_on": "2026-11-10",
+    "user_request": "Section menus must only scroll within the current page. Remove page-changing items rather than add another group.",
+    "change": "Removed Supplementary readings and Grading and course policies from the Home Course information index. The remaining five items are same-page anchors.",
+    "access": "Policy remains in the main navigation and footer. Supplementary readings remains in the footer.",
+    "course_content": "No course wording, policies or requirements changed."
   }
 }

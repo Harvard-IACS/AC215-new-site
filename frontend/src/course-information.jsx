@@ -25,8 +25,6 @@ export default function CourseInformation() {
       <nav className="page-index" aria-label="Course information sections">
         <p>On this page</p>
         {sectionIndex.map(([id, title]) => <a key={id} href={'#' + id}>{title}</a>)}
-        <a href={siteUrl('/readings.html')}>Supplementary readings</a>
-        <a href={siteUrl('/policy.html')}>Grading and course policies</a>
       </nav>
       <div className="course-prose course-information-prose">
         <Markdown remarkPlugins={[remarkGfm]} components={{
