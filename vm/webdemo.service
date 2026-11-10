@@ -1,0 +1,36 @@
+[Unit]
+Description=AC215 FastAPI course guide in Docker
+Requires=docker.service
+After=network-online.target docker.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+# The root service controls Docker; the container runs as UID/GID 10001.
+StateDirectory=gce-web-budget
+StateDirectoryMode=0700
+EnvironmentFile=-/etc/gce-web/course.env
+ExecStartPre=/usr/bin/install -d -m 0700 -o 10001 -g 10001 /var/lib/gce-web-budget/ledger
+ExecStartPre=-/usr/bin/docker rm -f gce-web-api
+ExecStart=/usr/bin/docker run --rm --init --pull=never --name gce-web-api \
+  --user 10001:10001 --read-only --cap-drop=ALL --security-opt=no-new-privileges=true \
+  --memory=768m --memory-swap=768m --pids-limit=64 \
+  --tmpfs /tmp:rw,noexec,nosuid,size=64m \
+  --env HOST=0.0.0.0 --env PORT=8000 --env OPENAI_API_KEY --env COURSE_PROVIDER \
+  --mount type=bind,src=/var/lib/gce-web-budget/ledger,dst=/app/data \
+  --publish ${API_PUBLISH} \
+  --log-driver=local --log-opt max-size=10m --log-opt max-file=3 \
+  ${API_IMAGE}
+ExecStop=/usr/bin/docker stop --time=15 gce-web-api
+Restart=always
+RestartSec=5
+RuntimeDirectory=gce-web
+RuntimeDirectoryMode=0700
+Environment=DOCKER_CONFIG=/run/gce-web/docker
+Environment=API_PUBLISH=8000:8000
+Environment=API_IMAGE=backend:current
+UMask=0077
+TimeoutStopSec=25
+
+[Install]
+WantedBy=multi-user.target

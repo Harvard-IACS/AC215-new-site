@@ -1,0 +1,40 @@
+{
+  "pages": [
+    {
+      "id": "schedule",
+      "path": "/schedule.html",
+      "title": "Schedule",
+      "filename": "schedule.md",
+      "embed": {
+        "title": "AC215 2026 course schedule",
+        "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQLCtLLU0ne8uPlItTIRiO2bRCXKC2orwEQAQCL7SpgXg0IrjAua0LvPff0vGVfuf9NgqDwL91ky5E9/pubhtml?gid=521870746&single=true&widget=true&headers=false&chrome=false",
+        "link_label": "Open full schedule"
+      },
+      "tableFile": "schedule.json"
+    },
+    {
+      "id": "policy",
+      "path": "/policy.html",
+      "title": "Policy",
+      "filename": "policy.md"
+    },
+    {
+      "id": "tutorials",
+      "path": "/tutorials.html",
+      "title": "Tutorials",
+      "filename": "tutorials.md"
+    },
+    {
+      "id": "faqs",
+      "path": "/faqs.html",
+      "title": "FAQs",
+      "filename": "faqs.md"
+    },
+    {
+      "id": "showcase",
+      "path": "/showcase.html",
+      "title": "Showcase",
+      "filename": "showcase.md"
+    }
+  ]
+}

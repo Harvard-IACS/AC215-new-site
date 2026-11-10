@@ -1,0 +1,9 @@
+/* Hallmark · component: static error page · genre: modern-minimal · theme: Vantage · v2.0.0 */
+:root { --paper: #080e11; --ink: #dce4e8; --accent: #c7ef83; --font-body: 'Geologica', sans-serif; }
+@font-face { font-family: 'Geologica'; src: url('fonts/geologica-latin.woff2') format('woff2'); font-display: swap; }
+html, body { overflow-x: clip; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-body); line-height: 1.6; }
+main { max-width: 60ch; margin: 15% auto; padding: 24px; }
+h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 300; overflow-wrap: break-word; min-width: 0; }
+a { color: var(--accent); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }

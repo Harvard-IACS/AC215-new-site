@@ -1,0 +1,25 @@
+{
+  "updated_on": "2026-11-10",
+  "files": [
+    {
+      "filename": "general.md",
+      "title": "Course information",
+      "description": "Course purpose, meeting details, prerequisites, teaching staff, grading, quizzes, late days, and course policies."
+    },
+    {
+      "filename": "lectures.md",
+      "title": "Lectures",
+      "description": "Lecture topics, meeting time and room, learning sequence, and Ed lecture and discussion links."
+    },
+    {
+      "filename": "milestones.md",
+      "title": "Project milestones",
+      "description": "The five milestone deadlines, grade weights, requirements, deliverables, submission instructions, and evaluation."
+    },
+    {
+      "filename": "project.md",
+      "title": "Team project",
+      "description": "Project scope, team formation, shared understanding, evaluation, support, and the final showcase."
+    }
+  ]
+}

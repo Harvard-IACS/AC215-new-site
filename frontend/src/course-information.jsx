@@ -1,0 +1,40 @@
+import { siteUrl } from './site-url';
+import Markdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import overview from './data/course-pages/overview.md?raw';
+
+const sectionIndex = [
+  ['course-overview', 'Course overview'],
+  ['logistics-tools', 'Logistics & tools'],
+  ['prerequisites', 'Prerequisites'],
+  ['course-components', 'Course components'],
+  ['team-projects', 'Team projects'],
+];
+
+function headingId(text) {
+  return String(text).toLowerCase().replace(/[^a-z0-9\s-]/g, '').trim().replace(/\s+/g, '-');
+}
+
+export default function CourseInformation() {
+  return <section className="course-information container" aria-labelledby="course-information">
+    <div className="section-intro">
+      <h2 id="course-information">Course information.</h2>
+      <p>Preparation, learning goals, and how the course works.</p>
+    </div>
+    <div className="document-layout">
+      <nav className="page-index" aria-label="Course information sections">
+        <p>On this page</p>
+        {sectionIndex.map(([id, title]) => <a key={id} href={'#' + id}>{title}</a>)}
+        <a href={siteUrl('/readings.html')}>Supplementary readings</a>
+        <a href={siteUrl('/policy.html')}>Grading and course policies</a>
+      </nav>
+      <div className="course-prose course-information-prose">
+        <Markdown remarkPlugins={[remarkGfm]} components={{
+          h2: ({ children }) => <h3 id={headingId(children)} tabIndex={-1}>{children}</h3>,
+          h3: ({ children }) => <h4 id={headingId(children)} tabIndex={-1}>{children}</h4>,
+          a: ({ href, children }) => <a href={siteUrl(href)} {...(/^https?:/.test(href || '') ? { target: '_blank', rel: 'noreferrer' } : {})}>{children}</a>,
+        }}>{overview}</Markdown>
+      </div>
+    </div>
+  </section>;
+}

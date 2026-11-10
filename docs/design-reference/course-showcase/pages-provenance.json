@@ -1,0 +1,260 @@
+{
+  "retrieved_on": "2026-11-02",
+  "source_repository": "Harvard-IACS/2026-AC215",
+  "transport": "Markdown fetched through GitHub plugin fetch_file. Official published schedule CSV downloaded and parsed as data only on the pinned test VPS. No browser automation or direct internet download on the Mac.",
+  "pages": [
+    {
+      "page": "schedule",
+      "file": "frontend/src/data/course-pages/schedule.md",
+      "source": "https://github.com/Harvard-IACS/2026-AC215/blob/main/schedule.md",
+      "source_sha": "072c8ea1add0b519888093329465f20ebd09949f",
+      "editorial_changes": [
+        "Removed Jekyll publishing frontmatter and duplicated Schedule page heading",
+        "Moved original published Google Sheets iframe URL to pages.json schedule.embed; retained all visible note and material-policy wording in Markdown",
+        "Parsed the official published Sheet CSV on the test VPS as data into schedule.json; retained every original header, cell string, whitespace, blank cell, and dated row without inferring merged week values"
+      ],
+      "schedule": {
+        "nature": "Actual published 2026 timetable: exact source CSV cells are available locally, with original live Sheet embed/link retained",
+        "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQLCtLLU0ne8uPlItTIRiO2bRCXKC2orwEQAQCL7SpgXg0IrjAua0LvPff0vGVfuf9NgqDwL91ky5E9/pubhtml?gid=521870746&single=true&widget=true&headers=false&chrome=false",
+        "gid": "521870746",
+        "table_rows_locally_reproduced": true,
+        "data_file": "frontend/src/data/course-pages/schedule.json",
+        "row_count": 29,
+        "csv_sha256": "24420d0eeb50e0c2e4f533a7fd6f2f9eaa8cc5177c61a8252123db15675a27e0",
+        "csv_bytes": 1482,
+        "csv_url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQLCtLLU0ne8uPlItTIRiO2bRCXKC2orwEQAQCL7SpgXg0IrjAua0LvPff0vGVfuf9NgqDwL91ky5E9/pub?gid=521870746&single=true&output=csv",
+        "download_location_on_test_vps": "~/internet-downloads/ac215-course-showcase/schedule/schedule-20261102.csv",
+        "last_verified_on": "2026-11-06",
+        "verification_csv_on_test_vps": "~/internet-downloads/ac215-course-showcase/audit-20261106/schedule.csv"
+      },
+      "new_path": "/schedule.html",
+      "output_sha256": "80f2ef3eb977f04e8fe4168a52fb3abf7ca299c23b8cf26f5488cb1721455404"
+    },
+    {
+      "page": "policy",
+      "file": "frontend/src/data/course-pages/policy.md",
+      "source": "https://github.com/Harvard-IACS/2026-AC215/blob/main/README.md",
+      "source_sha": "049b33f2fb3b519ca8faa2bc77f3cc7a6101c9e9",
+      "source_sections": [
+        "Quizzes and the “best 4 of 6” rule",
+        "Grade Distribution",
+        "Course Policies",
+        "Policy on Usage of Publicly Available Class Material",
+        "Accessibility",
+        "Inclusion and Belonging Statement",
+        "Auditing"
+      ],
+      "editorial_changes": [
+        "Extracted policy-relevant sections from README.md; index.md does not exist",
+        "Promoted opening Quizzes heading from H3 to H2 and removed redundant Course Policies grouping heading",
+        "Replaced all five old milestone links and project-page link with /#timeline; retained linked text and grade table",
+        "Preserved all policy wording, list items, and rules without reconciliation or invention"
+      ],
+      "new_path": "/policy.html",
+      "output_sha256": "8383047dca46ab49c5f4fe93b364fa0b3686bb6ad970393ef949ac6f1fe24c0a"
+    },
+    {
+      "page": "tutorials",
+      "file": "frontend/src/data/course-pages/tutorials.md",
+      "source": "https://github.com/Harvard-IACS/2026-AC215/blob/main/tutorials_demo.md",
+      "source_sha": "d8353a88d4a0c920058d9a0a66629d35fcb04ae7",
+      "editorial_changes": [
+        "Removed Jekyll publishing frontmatter and duplicated top-level page heading",
+        "Removed non-rendered HTML comment discussing an unpublished private AWS repository",
+        "Converted red styled coming-soon div to bold Markdown with the same visible words",
+        "Removed empty Description and GCP GitHub URL label placeholders for lecture 19",
+        "Preserved all 23 lecture sections, visible source descriptions and published tutorial/Ed links; exact transformed match to the current source"
+      ],
+      "new_path": "/tutorials.html",
+      "output_sha256": "1959460cabd699626d13a80afc9af09294e27a37b3cab9f902475d9b5adec5b2",
+      "last_synced_on": "2026-11-06"
+    },
+    {
+      "page": "faqs",
+      "file": "frontend/src/data/course-pages/faqs.md",
+      "source": "https://github.com/Harvard-IACS/2026-AC215/blob/main/faq.md",
+      "source_sha": "ea46c113552c4d90b4972abd3cc283632f69e9af",
+      "editorial_changes": [
+        "Removed Jekyll publishing frontmatter and duplicated FAQ page heading",
+        "Preserved all 23 numbered questions, answers, emphasis, and lists"
+      ],
+      "new_path": "/faqs.html",
+      "output_sha256": "e1f8d8030f4de8b92248b3843e254458bf2a7af8367b9f77a73e09e883f7022a"
+    },
+    {
+      "page": "showcase",
+      "file": "frontend/src/data/course-pages/showcase.md",
+      "source": null,
+      "source_sha": null,
+      "editorial_changes": [
+        "Added only the user-requested Coming soon placeholder; no event details invented"
+      ],
+      "new_path": "/showcase.html",
+      "output_sha256": "563d9a5f9ba6d59ae680521096704c99045490b59273fa86592c0e54a732532b"
+    },
+    {
+      "page": "readings",
+      "file": "frontend/src/data/course-pages/readings.md",
+      "source": "https://github.com/Harvard-IACS/2026-AC215/blob/main/readings.md",
+      "source_sha": "7bcf09ec8ecd0139ffc941e272b7f17ab5de9d59",
+      "editorial_changes": [
+        "Removed only Jekyll frontmatter; all 13 published reading links, labels and descriptions retained"
+      ],
+      "new_path": "/readings.html",
+      "output_sha256": "3fc91d9e9f69f986401c36afc43eb7363ae3b7e64d4cb10a96c606da20979d9c",
+      "aliases": [
+        "/readings/"
+      ]
+    }
+  ],
+  "internal_link_migration": {
+    "https://harvard-iacs.github.io/2026-AC215/milestone1/": "/#timeline",
+    "https://harvard-iacs.github.io/2026-AC215/milestone2/": "/#timeline",
+    "https://harvard-iacs.github.io/2026-AC215/milestone3/": "/#timeline",
+    "https://harvard-iacs.github.io/2026-AC215/milestone4/": "/#timeline",
+    "https://harvard-iacs.github.io/2026-AC215/milestone5/": "/#timeline",
+    "https://harvard-iacs.github.io/2026-AC215/projects/": "/#timeline"
+  },
+  "limitations": [
+    "Schedule CSV cells last verified against the live published Sheet on 6 November 2026; future changes require a deliberate refresh. Source blank cells remain blank.",
+    "Tutorial lecture 16 contains only its Ed lesson link; lecture 19 remains Coming Soon in the current source.",
+    "Tutorial inherited wording issues are retained and listed in audit_2026_11_06.",
+    "No date, time, location or registration information was added to the user-requested Showcase placeholder; the published schedule and policy still provide the tentative Dec 14 date."
+  ],
+  "preservation": "Original visible wording and meaning retained apart from recorded publishing transformations; source SHAs identify exact fetched originals",
+  "schedule_output_sha256": "96d3841c87624932d9e71cd7d85a7876b708082f762f8765eb4272a62d140881",
+  "verification": {
+    "original_git_blob_sha1": "All four fetched original contents matched the GitHub-reported blob SHAs.",
+    "markdown_preservation": "All five Markdown outputs matched the recorded source transformations exactly.",
+    "content_counts": {
+      "faqs": 23,
+      "lecture_sections": 23,
+      "schedule_dated_rows": 29,
+      "schedule_numbered_sessions": 23,
+      "quizzes": 6
+    },
+    "public_page_paths": "/schedule.html, /policy.html, /tutorials.html, /faqs.html, /showcase.html",
+    "old_site_links_in_page_content": 0
+  },
+  "presentation": {
+    "schedule": "Dates formatted for reading; published blank topics retained as em dashes; empty unnamed column omitted; event capitals and decorative emoji normalized without changing event wording. Lecture PDFs link appears in page header; complete material-use policy is on Policy, linked below the timetable. Original embed is kept as an external live schedule link rather than an iframe.",
+    "policy": "Original section text retained; H2/H3 policy sections are indexed as reading sections; Consent remains under the material-use policy. Grade table retains original values. Auditing checkmark source markers render as monochrome Lucide Check icons, replacing the list bullet; all original words and source Markdown remain unchanged.",
+    "tutorials": "Original Lecture N headings and source body retained; Ed lesson link moves to each lecture header. Original Coming Soon entries retained.",
+    "faqs": "Original questions and answers retained in native disclosures; source numbers appear beside each question; search does not alter content.",
+    "showcase": "Only requested Coming soon state; existing classroom poster used as illustration, with no project/date claims."
+  },
+  "last_verified_on": "2026-11-06",
+  "home_information": {
+    "file": "frontend/src/data/course-pages/overview.md",
+    "source": "https://github.com/Harvard-IACS/2026-AC215/blob/main/README.md",
+    "source_sha": "049b33f2fb3b519ca8faa2bc77f3cc7a6101c9e9",
+    "source_lines": "37-193: Course Overview through Team Projects, before Quizzes",
+    "output_sha256": "1e3de8443b73d4b01c25de04b000cbe28952e278f0070906fad6ece8441e0457",
+    "transformation": "Literal source extraction. Render H2/H3 as H3/H4 within the Home Course information section; all wording, links and 14 topics retained.",
+    "enrollment_notice": "Original README notice restored near the Home introduction",
+    "introductory_video": "https://canvas.harvard.edu/courses/170012",
+    "supplementary_readings": "/readings.html",
+    "placement": "After the SEC scene experience and before milestones; linked from the hero. Existing scene scroll track unchanged.",
+    "milestone_interface": "Milestone rows open the full instructions in dialogs. No duplicate link row or JavaScript-disabled alternate UI is maintained."
+  },
+  "staff_verification": {
+    "url": "https://harvard-iacs.github.io/2026-AC215/staff/",
+    "verified_on": "2026-11-06",
+    "published_html_sha256": "6fa2ef88ccf15843be62004ec58b7fdb1204980187367e30e0af2d7a7cdf2271",
+    "result": "All 10 names and the contact email match. Restored each published profile link, plus StellarDNN and Besides Data website links. Supplied Pavlos portrait retained.",
+    "office_hours": "Published staff page directs students to Ed; restored syllabus also explains TF support and weekly meetings."
+  },
+  "audit_2026_11_06": {
+    "scope": "Current local course site against live original published site, current GitHub source files and published schedule CSV",
+    "schedule": "Live CSV SHA256 unchanged: all 29 dated rows and cells retained",
+    "policy_and_faq": "Source SHAs unchanged; original wording and all 23 FAQs retained after existing publishing transforms",
+    "milestones": "All five current source SHAs match milestone-provenance.json; instructions, deadlines and course weights unchanged",
+    "github_link_destinations": {
+      "unique_urls": 46,
+      "result": "All returned HTTP 200; fragments are not covered by HTTP status checks",
+      "evidence_on_test_vps": "~/internet-downloads/ac215-course-showcase/audit-20261106/github-links.json"
+    },
+    "significant_changes_approved": "User approved current Tutorials source updates and restoring missing syllabus information on Home",
+    "source_ambiguities_retained": [
+      "User requested FAQ wording remain consistent with the old site; attendance and emergency-extension scope not editorially clarified",
+      "Lecture 10 tutorial subsection still says LLM-Fine Tuning above Cheese-app-V0, as upstream",
+      "Lecture 20 description still says GCR although its linked current tutorial uses Google Artifact Registry",
+      "MS2 specifies a 15-minute presentation, then separately describes group Q&A and per-student checks; total meeting timing should be confirmed with the TF"
+    ],
+    "omitted_template_material": "Old Calendar has no iframe or additional visible course information. Old Announcements contains unedited site-template setup examples, not course announcements.",
+    "authenticated_content": "Ed, Canvas, Colab and Slides access/contents not verified. No paid model call or downloaded tutorial execution.",
+    "rendered_verification": {
+      "environment": "Local Vite production preview http://127.0.0.1:4173/; existing Playwright with installed Chrome because Browser plugin is not available",
+      "page_suite": "12 checks passed; desktop 1440px and mobile 320/390px; page identity, navigation, themes, schedule filters, search, FAQ disclosure, policy table, previews, no-JavaScript reading",
+      "content_check": "All 86 syllabus paragraphs and 256 milestone paragraphs render at both 1440px and 390px. All five dialogs open/close and return keyboard focus.",
+      "console_and_assets": "No page errors, console errors/warnings, missing local assets or failed app requests",
+      "limitations": "Local Chrome only; public URL HTTP checks do not validate every remote fragment or authenticated content. Course content was not published to the old site."
+    }
+  },
+  "static_course_mode": {
+    "updated_on": "2026-11-06",
+    "chat": "Disabled by default. Backend, notes, chat UI implementation and tests remain in the repository. VITE_ENABLE_CHAT=true opts into the frontend and development API proxy.",
+    "entry_points": "Default output omits floating launcher, hero button, Home question section and FAQ chat button; no backend requests are made. JavaScript is required for interactive controls; no alternate UI is added for scripting-disabled browsers.",
+    "self_contained_course_content": "Supplementary readings and five milestone pages are local static documents. No runtime link depends on the retired original site. Ed, Canvas and third-party tutorials remain intentional external resources.",
+    "full_milestones": "/milestone1.html through /milestone5.html render the existing source Markdown, deadlines and grade weights; dialogs are retained.",
+    "compatibility": "Generated /readings/index.html and /milestone1/index.html through /milestone5/index.html preserve the original reading and milestone URLs on static hosts with index-file support. Canonical links use explicit .html files for backend-bucket compatibility.",
+    "verification": {
+      "backend": "Local backend stopped during static checks",
+      "page_suite": "13 checks passed on the final default build; no app, hydration, console, missing-asset or API-request errors",
+      "content": "All five milestone sources reused by full static pages and dialogs; readings preserve all 13 source links",
+      "optional_chat": "Opt-in build and free local notes preview verified on Home and FAQ; no paid model calls",
+      "artifact_checks": "Default JS contains no chat endpoint; generated HTML has no retired-site links; six compatibility files match their canonical pages",
+      "scope": "Local Chrome and file checks only; no publication or cloud deployment performed"
+    }
+  },
+  "navigation_rendering": {
+    "stylesheet": "Blocking link in the document head, loaded before the page can paint",
+    "development": "Vite renders complete route HTML through the same document renderer as the production build",
+    "transition": "Original native cross-document content animation and stationary header snapshot retained; theme-control colors use the saved preference before hydration",
+    "no_special_fallbacks": "Removed the noscript milestone link list, scripting-state CSS branches and JavaScript-disabled UI checks",
+    "verification": {
+      "checks": [
+        {
+          "mode": "dev-final",
+          "passed": 13,
+          "transitions": 12
+        },
+        {
+          "mode": "build-verified",
+          "passed": 13,
+          "transitions": 12
+        }
+      ],
+      "result": "Both dev and built pages arrive with their styled header. The header remains fully opaque with no transform or animation while content transitions, across light, dark and mobile navigation. No console, missing-asset or API request errors.",
+      "fallback_removal": "No noscript content in generated pages; special scripting-disabled CSS and tests removed.",
+      "evidence": "/tmp/ac215-navigation-qa/"
+    }
+  },
+  "github_pages": {
+    "prepared_on": "2026-11-10",
+    "repository": "Harvard-IACS/AC215-new-site",
+    "workflow": ".github/workflows/pages.yml",
+    "base_path": "Read from actions/configure-pages output; default local path is /",
+    "content_changes": "No course wording or rules changed for hosting. Internal links and public asset URLs are prefixed at render/build time.",
+    "legacy_paths": [
+      "/schedule/",
+      "/tutorials_demo/",
+      "/faq/",
+      "/ProjectShowcase/",
+      "/readings/",
+      "/milestone1/",
+      "/milestone2/",
+      "/milestone3/",
+      "/milestone4/",
+      "/milestone5/"
+    ],
+    "legacy_redirects": {
+      "/staff/": "/#people",
+      "/projects/": "/#timeline",
+      "/calendar/": "/schedule.html"
+    },
+    "chat": "Full backend and chat source retained; Pages workflow explicitly disables chat and publishes only frontend/dist.",
+    "source_license": "upstream-LICENSE.txt; Harvard-IACS/2026-AC215/LICENSE blob 0a7999d082b397cb3d253bf77d6f21e27bb7643a",
+    "cutover": "New preview only. Existing 2026-AC215 Pages repository and its live address are unchanged."
+  }
+}

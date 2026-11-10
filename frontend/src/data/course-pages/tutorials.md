@@ -1,0 +1,273 @@
+Tutorials are grouped by the lecture they accompany.
+
+---
+
+## Lecture 1: Virtual Environments and Virtual Machines
+_[Ed lesson](https://edstem.org/us/courses/97373/lessons/166027/)_
+
+### Create Simple Translate App - No Docker, No UV
+- **Description**: A simple translation app built without using Docker or UV.
+- **GCP GitHub URL**: [Install App on VM Manually](https://github.com/dlops-io/simple-translate?tab=readme-ov-file#%EF%B8%8F-installing-app-on-vm-manually)
+- **AWS GitHub URL**: [Install App on VM Manually - AWS](https://github.com/dlops-io/simple-translate-aws?tab=readme-ov-file#installing-app-on-vm-manually-t1)
+
+### Create Simple Translate App with UV (GCP) / Pipenv (AWS), No Docker
+- **Description**: A translation app using UV on GCP or Pipenv on AWS, without Docker.
+- **GCP GitHub URL**: [Install App on VM using UV](https://github.com/dlops-io/simple-translate?tab=readme-ov-file#-installing-app-on-vm-using-uv)
+- **AWS GitHub URL**: [Install App on VM using Pipenv - AWS](https://github.com/dlops-io/simple-translate-aws?tab=readme-ov-file#installing-app-on-vm-using-pipenv-t2)
+
+---
+
+## Lecture 2: Containers I
+_[Ed lesson](https://edstem.org/us/courses/97373/lessons/166028/)_
+
+### Create Simple Translate App with Docker, Push Image to Docker Hub
+- **Description**: Build a simple translation app, containerize it with Docker, and push the image to Docker Hub.
+- **GCP GitHub URL**: [Develop App using Containers](https://github.com/dlops-io/simple-translate?tab=readme-ov-file#-developing-app-using-containers)
+- **AWS GitHub URL**: [Develop App using Containers - AWS](https://github.com/dlops-io/simple-translate-aws?tab=readme-ov-file#developing-app-using-containers-t3)
+
+### Run App in VM using Docker
+- **Description**: A continuation of the Docker tutorial, running the containerized app in a VM.
+- **GCP GitHub URL**: [Run App on VM using Docker](https://github.com/dlops-io/simple-translate?tab=readme-ov-file#%EF%B8%8F-running-app-on-vm-using-docker)
+- **AWS GitHub URL**: [Run App on VM using Docker - AWS](https://github.com/dlops-io/simple-translate-aws?tab=readme-ov-file#running-app-on-vm-using-docker-t4)
+
+---
+
+## Lecture 3: Containers II
+_[Ed lesson](https://edstem.org/us/courses/97373/lessons/166033/)_
+
+### Mega Pipeline App
+- **Description**: Build a Mega Pipeline App.
+- **GCP GitHub URL**: [Mega Pipeline App](https://github.com/dlops-io/mega-pipeline)
+- **AWS GitHub URL**: [Mega Pipeline App](https://github.com/dlops-io/mega-pipeline-aws)
+
+---
+
+## Lecture 4: Containers II-b
+_[Ed lesson](https://edstem.org/us/courses/97373/lessons/166029/)_
+
+### Docker
+
+#### Mega Pipeline App with Flexible Workflow
+- **Description**: Build a Mega Pipeline App with Flexible Workflow.
+- **GCP GitHub URL**: [Mega Pipeline App (Flexible Workflow)](https://github.com/dlops-io/mega-pipeline/tree/flexible-workflow)
+
+#### Docker Compose: Port Toy App
+- **Description**: Container networks and ports. Two containers, one published port, one message.
+- **GCP GitHub URL**: [Port Toy App](https://github.com/dlops-io/port_toy)
+
+---
+
+## Lecture 5: LLM: RAGs
+_[Ed lesson](https://edstem.org/us/courses/97373/lessons/182195/)_
+
+### LLM-RAG
+- **Description**: Building a RAG System with Vector DB and LLM
+- **GCP GitHub URL**: [LLM-1](https://github.com/dlops-io/llm-rag)
+
+---
+
+## Lecture 6: LLM: Agents I
+_[Ed lesson](https://edstem.org/us/courses/97373/lessons/166030/)_
+
+### LLM Agents
+- **Description**: LLM Agents notebooks and the agents section of the LLM-RAG repository
+  - **LLM Agents - The Cheesy way - Cheese Quiz**: [Colab](https://colab.research.google.com/drive/14UKW-Z7kFPuCwVqyUFcLxeA1KF70fwfm?usp=sharing)
+  - **LLM-RAG with Agents**: [GitHub](https://github.com/dlops-io/llm-rag?tab=readme-ov-file#agents)
+  - **Travel Planner**: [Colab](https://colab.research.google.com/drive/1I_jJEHJsVkGxNoSC1c4wEoVF2QL6vCVY?usp=sharing)
+  - **Cheese Newsletter**: [Colab](https://colab.research.google.com/drive/1nnHrJ4Si3tpgUQl6HqlcwxKymV1-ecPv?usp=sharing)
+
+---
+
+## Lecture 7: LLM: Agents II (+Agents Practical Use)
+_[Ed lesson](https://edstem.org/us/courses/97373/lessons/166031/)_
+
+### Agent Harness
+- **Description**: Agent Harness
+- **Colab Notebook**: [Agent Harness on Google Colab](https://colab.research.google.com/drive/1ZYMsbG0gqsbs-6Pcj8WtT3WhEa4f80EZ?usp=sharing)
+- **GCP GitHub URL**: [Agent Harness](https://github.com/dlops-io/agent-harness)
+
+---
+
+## Lecture 8: LLM: Finetuning
+_[Ed lesson](https://edstem.org/us/courses/97373/lessons/166032/)_
+
+### LLM-Fine Tuning
+- **Description**: LLM Fine Tuning using PEFT
+- **GCP GitHub URL**: [LLM Fine Tuning](https://github.com/dlops-io/llm-finetuning)
+- **Colab Notebook**: [LLM Fine Tuning Notebook](https://colab.research.google.com/drive/1oX3ADMHphW2v7mwV7zkEWD5oYewJZEAC)
+
+---
+
+## Lecture 9: Automating Software Development: CI, unit testing
+_[Ed lesson](https://edstem.org/us/courses/97373/lessons/166034/)_
+
+_Taught as a guest lecture by Rahul Dave ("Software Development for Machine Learning")._
+- **Slides/Tutorial App**: [Babykev Walk](https://github.com/rahuldave/babykev-walk)
+- **Project Repository**: [Babykev](https://github.com/rahuldave/babykev)
+
+### Testing with Pytest
+- **Description**: Unit, integration, system and acceptance tests with pytest
+- **GCP GitHub URL**: [Testing with Pytest](https://github.com/dlops-io/cheese-app-ci-cd/blob/main/README.md#part-3-testing-with-pytest)
+
+### Automating with Pre-commit Hooks
+- **Description**: Local git hooks that run linters, formatters and tests before each commit
+- **GCP GitHub URL**: [Pre-commit Hooks](https://github.com/dlops-io/cheese-app-ci-cd/blob/main/README.md#part-4-automating-with-pre-commit-hooks)
+
+---
+
+## Lecture 10: Connecting to the Cloud: Networking, Authentication & Storage
+_[Ed lesson](https://edstem.org/us/courses/97373/lessons/166035/)_
+
+### LLM-Fine Tuning
+- **Description**: Cheese-app-V0
+- **GCP GitHub URL**: [Cheese-app-V0](https://github.com/dlops-io/cheese-app-v0)
+
+---
+
+## Lecture 11: Data Management and Versioning
+_[Ed lesson](https://edstem.org/us/courses/97373/lessons/166036/)_
+
+### Label Studio
+- **Description**: Learn how to use Label Studio for data labeling.
+- **GCP GitHub URL**: [Label Studio](https://github.com/dlops-io/data-labeling)
+- **AWS GitHub URL**: [Label Studio - AWS](https://github.com/dlops-io/data-labeling-aws)
+
+### Data Versioning
+- **Description**: Learn about versioning practices in development. Particularly, how to use DVC for data versioning.
+- **GCP GitHub URL**: [DVC](https://github.com/dlops-io/data-versioning)
+
+---
+
+## Lecture 12: App Design
+_[Ed lesson](https://edstem.org/us/courses/97373/lessons/166037/)_
+
+### Steps to build a Solution Architecture
+- **Slides**: [Steps to build a Solution Architecture](https://docs.google.com/presentation/d/1U69Nri6ZBYmjGSv5402kZwXnswo1eYZDBhBRPuIfKas)
+
+---
+
+## Lecture 13: Advanced Training Workflows: experiment tracking (W&B), multi-GPU, serverless training (Vertex AI)
+_[Ed lesson](https://edstem.org/us/courses/97373/lessons/166038/)_
+
+### Experiment Tracking
+- **Description**: Classification Model, Experiment Tracking
+- **Colab Notebook A**: [Cheese Classification Models](https://colab.research.google.com/drive/1h6xRhjILxaUosXlZ5ZC1NZbP0AOHALTl?usp=sharing)
+- **Colab Notebook B**: [Experiment Tracking with W&B](https://colab.research.google.com/drive/1aAE5vR9r6Syh4heZboDbQNZS048VToxS?usp=sharing)
+
+### Advanced Workflow: Serverless Model Training with Vertex AI
+- **Description**: Serverless Model Training with Vertex AI
+- **GCP GitHub URL**: [Serverless Model Training](https://github.com/dlops-io/model-training)
+
+
+
+---
+
+## Lecture 14: Serverless Deployment: Functions, Services, Identity, and Jobs
+_[Ed lesson](https://edstem.org/us/courses/97373/lessons/166039/)_
+
+### Serverless Deployment
+- **Description**: Follow the [four-part tutorial](https://github.com/dlops-io/serverless-deployment) in order. Each part adds one idea to the same translation application; start with the console walkthroughs and expand the optional command-line alternatives when useful.
+  - [Part 1: Deploy a translation function](https://github.com/dlops-io/serverless-deployment#part-1-deploy-a-translation-function): source code to a public endpoint.
+  - [Part 2: Deploy a translation web app](https://github.com/dlops-io/serverless-deployment#part-2-deploy-a-translation-web-app): a tested local container to a public Cloud Run service.
+  - [Part 3: Give the web app access to Agent Platform](https://github.com/dlops-io/serverless-deployment#part-3-give-the-web-app-access-to-agent-platform): service accounts, speech generation, and local development with Application Default Credentials.
+  - [Part 4: Generate and save a translated audio edition](https://github.com/dlops-io/serverless-deployment#part-4-generate-and-save-a-translated-audio-edition): a finite Cloud Run job that saves translated text and audio to Cloud Storage, with console and CLI submission paths.
+
+---
+
+## Lecture 15: ML Workflows with Vertex AI
+_[Ed lesson](https://edstem.org/us/courses/97373/lessons/166040/)_
+
+### Model Deployment using Vertex AI
+- **Description**: Model Deployment using Vertex AI
+- **GCP GitHub URL**: [Model Deployment](https://github.com/dlops-io/model-deployment)
+- **AWS GitHub URL**: [Model Deployment - AWS](https://github.com/dlops-io/model-deployment-aws)
+
+### ML Workflow
+- **Description**: Vertex AI ML Workflow for pipeline. Data Processing, data collection, model training, model deployment.
+- **GCP GitHub URL**: [ML Workflow](https://github.com/dlops-io/ml-workflow)
+- **AWS GitHub URL**: [ML Workflow - AWS](https://github.com/dlops-io/ml-workflow-aws)
+
+---
+
+## Lecture 16: System Tradeoffs: Performance, Cost, and Design Choices
+_[Ed lesson](https://edstem.org/us/courses/97373/lessons/166041/)_
+
+---
+
+## Lecture 17: Evaluating and Monitoring ML Systems in Production
+_[Ed lesson](https://edstem.org/us/courses/97373/lessons/166042/)_
+
+### Production Monitoring
+- **Description**: Investigate a failing cheese model in production from its prediction logs, then build the monitoring that would have caught it.
+- **GCP GitHub URL**: [Production Monitoring](https://github.com/dlops-io/production-monitoring/tree/main)
+
+---
+
+## Lecture 18: APIs + Frontend
+_[Ed lesson](https://edstem.org/us/courses/97373/lessons/166043/)_
+
+### APIs & Frontend Demo
+- **Description**: APIs & Frontend Demo
+- **GCP GitHub URL**: [Cheese Shop Demo](https://github.com/dlops-io/cheese-shop-demo)
+
+### API & Frontend
+- **Description**: Set up and run the Cheese App
+- **GCP GitHub URL**: [App v2: Setup & Run Cheese App](https://github.com/dlops-io/cheese-app-v2#tutorial-setup--run-cheese-app)
+
+### Backend and FastAPI
+- **Description**: Cheese App APIs
+- **GCP GitHub URL**: [App v2: FastAPI Backend](https://github.com/dlops-io/cheese-app-v2#tutorial-backend-apis)
+
+### Frontend React
+- **Description**: Frontend App (React)
+- **GCP GitHub URL**: [App v2: Frontend React](https://github.com/dlops-io/cheese-app-v2#tutorial-react-frontend-setup)
+
+---
+
+## Lecture 19: Scaling: Kubernetes (local)
+_[Ed lesson](https://edstem.org/us/courses/97373/lessons/166044/)_
+
+### Scaling: Kubernetes (local)
+
+**Tutorial for Scaling: Kubernetes (local) coming soon**
+
+---
+
+## Lecture 20: Deployment: Pulumi
+_[Ed lesson](https://edstem.org/us/courses/97373/lessons/166045/)_
+
+### Deployment of the full app to GCP (Manual)
+- **Description**: Deployment to GCP. Manual steps to deploy the app to GCP.
+- **GCP GitHub URL**: [App v3: Deployment to GCP (Manual)](https://github.com/dlops-io/cheese-app-v3?tab=readme-ov-file#deployment-to-gcp-manual)
+
+### Deployment to GCP with Pulumi
+- **Description**: Automate the same deployment with Pulumi: build and push images to GCR, create the compute instance, provision it, and launch the containers.
+- **GCP GitHub URL**: [App v3: Deployment to GCP (Single VM Instance)](https://github.com/dlops-io/cheese-app-v3?tab=readme-ov-file#deployment-to-gcp-single-vm-instance)
+
+---
+
+## Lecture 21: Automating Software Development: CI/CD with GitHub Actions and other tools II
+_[Ed lesson](https://edstem.org/us/courses/97373/lessons/166046/)_
+
+### Remote CI/CD with GitHub Actions
+- **Description**: CI pipeline on GitHub Actions: build container, lint and format, test, summary
+- **GCP GitHub URL**: [GitHub Actions Remote CI/CD](https://github.com/dlops-io/cheese-app-ci-cd/blob/main/README.md#part-5-github-actions-remote-ci)
+
+---
+
+## Lecture 22: Scaling: Kubernetes (cloud)
+_[Ed lesson](https://edstem.org/us/courses/97373/lessons/166047/)_
+
+### Deployment with Scaling using Kubernetes (cloud)
+- **Description**: Deployment with Scaling using Kubernetes
+- **GCP GitHub URL**: [App v3: Deployment with Scaling using Kubernetes](https://github.com/dlops-io/cheese-app-v3?tab=readme-ov-file#deployment-with-scaling-using-kubernetes)
+
+---
+
+## Lecture 23: Final Deployment and Review
+_[Ed lesson](https://edstem.org/us/courses/97373/lessons/166048/)_
+
+### Continuous Integration and Continuous Deployment
+- **Description**: Continuous Integration and Continuous Deployment
+- **GCP GitHub URL**: [App v4: Continuous Integration and Continuous Deployment](https://github.com/dlops-io/cheese-app-v4#cheese-app---automation)
+- **AWS GitHub URL**: [App: AWS - Continuous Integration and Continuous Deployment](https://github.com/dlops-io/cheese-app-aws)

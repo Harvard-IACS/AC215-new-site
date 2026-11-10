@@ -1,0 +1,283 @@
+{
+  "title_row": [
+    "",
+    "",
+    "",
+    "AC215 2026 SCHEDULE",
+    "",
+    "",
+    ""
+  ],
+  "headers": [
+    "Week",
+    "Date",
+    "Session",
+    "Lecture",
+    "Quizzes",
+    "",
+    "Milestone due dates"
+  ],
+  "rows": [
+    [
+      "1",
+      "9/3",
+      "1",
+      "Virtual Environments and Virtual Machines",
+      " ",
+      "",
+      ""
+    ],
+    [
+      "2",
+      "9/8",
+      "2",
+      "Containers I",
+      "",
+      "",
+      ""
+    ],
+    [
+      "",
+      "9/10",
+      "3",
+      "Containers II",
+      "",
+      "",
+      ""
+    ],
+    [
+      "3",
+      "9/15",
+      "4",
+      "Containers II-b",
+      "Quiz 1",
+      "",
+      ""
+    ],
+    [
+      "",
+      "9/17",
+      "5",
+      "LLM: RAGs",
+      " ",
+      "",
+      ""
+    ],
+    [
+      "4",
+      "9/22",
+      "6",
+      "LLM: Agents I",
+      "",
+      "",
+      ""
+    ],
+    [
+      "",
+      "9/24",
+      "",
+      "PROJECT IDEATION WEEK",
+      "",
+      "",
+      ""
+    ],
+    [
+      "5",
+      "9/29",
+      "7",
+      "LLM: Agents II (SJ) +Agents practical use (PP) ",
+      "",
+      "",
+      "MS1 "
+    ],
+    [
+      "",
+      "10/1",
+      "8",
+      "LLM: Finetuning",
+      "",
+      "",
+      " "
+    ],
+    [
+      "6",
+      "10/6",
+      "9",
+      "Automating Software Development: CI, unit testing (RD) ",
+      "Quiz 2",
+      "",
+      " "
+    ],
+    [
+      "",
+      "10/8",
+      "10",
+      "Connecting to the Cloud: Networking, Authentication & Storage",
+      " ",
+      "",
+      ""
+    ],
+    [
+      "7",
+      "10/13",
+      "11",
+      "Data Management and Versioning ",
+      "",
+      "",
+      ""
+    ],
+    [
+      "",
+      "10/15",
+      "12",
+      "App Design (SJ)",
+      "",
+      "",
+      ""
+    ],
+    [
+      "8",
+      "10/20",
+      "13",
+      "Advanced Training Workflows: experiment tracking (W&B), multi-GPU, serverless training (Vertex AI) (RD)",
+      "Quiz 3",
+      "",
+      "MS2"
+    ],
+    [
+      "",
+      "10/22",
+      "14",
+      "Serverless Deployment: Cloud Functions, Cloud Run (CG) ",
+      " ",
+      "",
+      ""
+    ],
+    [
+      "9",
+      "10/27",
+      "15",
+      "ML Workflows with Vertex AI",
+      "",
+      "",
+      ""
+    ],
+    [
+      "",
+      "10/29",
+      "16",
+      "System Tradeoffs: Performance, Cost, and Design Choices",
+      "",
+      "",
+      " "
+    ],
+    [
+      "10",
+      "11/3",
+      "17",
+      "Evaluating and Monitoring ML Systems in Production",
+      "Quiz 4",
+      "",
+      " "
+    ],
+    [
+      "",
+      "11/5",
+      "18",
+      "APIs + Frontend (SJ)",
+      "",
+      "",
+      " "
+    ],
+    [
+      "11",
+      "11/10",
+      "19",
+      "Scaling: Kubernetes (local) (SJ)",
+      "",
+      "",
+      " "
+    ],
+    [
+      "",
+      "11/12",
+      "20",
+      "Deployment: Pulumi",
+      "Quiz 5",
+      "",
+      "MS3"
+    ],
+    [
+      "12",
+      "11/17",
+      "21",
+      "Automating Software Development: CI/CD with GitHub Actions and other tools II ",
+      "",
+      "",
+      " "
+    ],
+    [
+      "",
+      "11/19",
+      "22",
+      "Scaling: Kubernetes (cloud)  ",
+      "",
+      "",
+      " "
+    ],
+    [
+      "13",
+      "11/24",
+      " ",
+      "🦃 THANKSGIVING WEEK 🦃",
+      "",
+      "",
+      " "
+    ],
+    [
+      "",
+      "11/26",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    [
+      "14",
+      "12/1",
+      "23",
+      "Final Deployment and Review",
+      "Quiz 6",
+      "",
+      "MS4"
+    ],
+    [
+      "",
+      "12/3",
+      " ",
+      "",
+      "",
+      "",
+      " "
+    ],
+    [
+      "",
+      "12/14",
+      "",
+      "⭐ SHOWCASE ⭐",
+      "",
+      "",
+      ""
+    ],
+    [
+      "",
+      "12/15",
+      "",
+      "DELIVERABLES DEADLINE ",
+      "",
+      "",
+      "MS5"
+    ]
+  ]
+}

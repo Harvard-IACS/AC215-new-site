@@ -1,0 +1,68 @@
+{
+  "retrieved_on": "2026-11-02",
+  "source": "Harvard-IACS/2026-AC215",
+  "pages": [
+    {
+      "milestone": 1,
+      "source": "https://github.com/Harvard-IACS/2026-AC215/blob/main/milestone1.md",
+      "sha": "f8d24d2c5da7148761267d67d2bf0d2e73162d01",
+      "title": "Milestone 1: Project Proposals & Team Formation",
+      "editorialChanges": [
+        "Removed publishing frontmatter and duplicated page title",
+        "Omitted unfilled template-link placeholder sections",
+        "Relocated sample image; descriptive image alt text",
+        "Removed Staff feedback: TBD at the explicit request of the instructor"
+      ]
+    },
+    {
+      "milestone": 2,
+      "source": "https://github.com/Harvard-IACS/2026-AC215/blob/main/milestone2.md",
+      "sha": "60efda202de7f352fac9fe007eeb1549024540d1",
+      "title": "Milestone 2: MLOps Infrastructure",
+      "editorialChanges": [
+        "Removed publishing frontmatter and duplicated page title",
+        "Omitted unfilled template-link placeholder sections"
+      ]
+    },
+    {
+      "milestone": 3,
+      "source": "https://github.com/Harvard-IACS/2026-AC215/blob/main/milestone3.md",
+      "sha": "6b12237c946e03b1b5c3ad481d326873db2862b2",
+      "title": "Milestone 3: Integration and Deployment",
+      "editorialChanges": [
+        "Removed publishing frontmatter and duplicated page title"
+      ],
+      "last_verified_on": "2026-11-10",
+      "output_sha256": "211ac2d410845151d9ce14be3dfe2b5157c5e40e33c1a061cf34a4be2589f687",
+      "template_repository": {
+        "url": "https://github.com/dlops-io/project-setup-template/tree/milestone3",
+        "verification": "Branch README fetched successfully through the GitHub connector",
+        "readme_sha": "e87225c4da2974a134d7170255b449b30a31c83f"
+      }
+    },
+    {
+      "milestone": 4,
+      "source": "https://github.com/Harvard-IACS/2026-AC215/blob/main/milestone4.md",
+      "sha": "2c495886c794c704ce7e7a19541bddd7632fef8b",
+      "title": "Milestone 4: Design & Development",
+      "editorialChanges": [
+        "Removed publishing frontmatter and duplicated page title",
+        "Omitted unfilled template-link placeholder sections"
+      ]
+    },
+    {
+      "milestone": 5,
+      "source": "https://github.com/Harvard-IACS/2026-AC215/blob/main/milestone5.md",
+      "sha": "6b452b6ce7c10f91ece30de5c8ca30d41975d8e4",
+      "title": "Milestone 5: Deployment & Final Project Delivery",
+      "editorialChanges": [
+        "Removed publishing frontmatter and duplicated page title",
+        "Omitted unfilled template-link placeholder sections"
+      ]
+    }
+  ],
+  "preservation": "Instruction wording preserved, with recorded publishing edits and the instructor-requested removal of Staff feedback: TBD. Sample image stored locally.",
+  "last_verified_on": "2026-11-06",
+  "verification": "MS1, MS2, MS4 and MS5 last verified on 6 November 2026. MS3 verified on 10 November 2026; its complete transformed source text matches exactly, including the published Template Repository section. MS3 deadline, requirements and evaluation wording remain source-identical.",
+  "presentation": "The same instruction sources drive both the Home dialogs and the complete static pages at /milestone1.html through /milestone5.html. No instruction copy is maintained separately."
+}
