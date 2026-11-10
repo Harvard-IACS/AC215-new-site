@@ -263,5 +263,12 @@
     "change": "Removed Supplementary readings and Grading and course policies from the Home Course information index. The remaining five items are same-page anchors.",
     "access": "Policy remains in the main navigation and footer. Supplementary readings remains in the footer.",
     "course_content": "No course wording, policies or requirements changed."
+  },
+  "portrait_interaction": {
+    "updated_on": "2026-11-10",
+    "request": "Reveal each teaching-team portrait in its original colors on mouse hover, with a gradual transition.",
+    "presentation": "All ten portraits retain grayscale at rest. Hovering a portrait or focusing a link in its card transitions its grayscale filter over 650 ms with the existing ease-in-out curve; leaving reverses the same transition.",
+    "accessibility": "Keyboard focus also reveals color. The existing reduced-motion preference removes the animation. Hover behavior is limited to devices that support hover.",
+    "preservation": "Original portrait assets, names, profile links and course wording are unchanged. No recoloring or generated image edits."
   }
 }

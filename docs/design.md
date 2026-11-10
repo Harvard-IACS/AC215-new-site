@@ -27,3 +27,5 @@ Milestone rows open compact modal reading windows with a blurred backdrop. The o
 The full milestone instructions live in `frontend/src/data/milestones/ms1.md` through `ms5.md`. Preserve their wording and meaning; restructure presentation or fix clear grammar only. Publishing frontmatter, duplicated page titles, empty template-link placeholders and the Staff feedback: TBD placeholder are omitted. The source commit hashes and editorial changes are recorded in `design-reference/course-showcase/milestone-provenance.json`. The chatbot's four course-note files remain concise summaries. Load the Markdown renderer when a dialog opens.
 
 The hall's main-row spacing is 2.65, reducing the empty gap in front of the raised rear banks. Keep the 240 main and 60 rear seats, fixed entry, room transform and facing.
+
+Teaching-team portraits rest in grayscale and reveal their original colors over 650 ms when hovered. Keyboard focus within a person’s card gives the same effect. The fade reverses on leaving, and the system reduced-motion preference removes the animation. Apply this presentation consistently to instructors and teaching staff; preserve the original images.

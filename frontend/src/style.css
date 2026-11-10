@@ -191,7 +191,9 @@ html[data-theme='light'] .classroom-still-dark { opacity: 0; }
 .instructor-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-lg); }
 .staff-list { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-xl) var(--space-lg); align-self: start; }
 .person { display: flex; flex-direction: column; align-items: flex-start; min-width: 0; gap: var(--space-sm); }
-.person img { display: block; width: 100%; aspect-ratio: 1; height: auto; object-fit: cover; object-position: center 28%; filter: grayscale(1); border-radius: var(--radius-card); background: var(--color-paper-2); }
+.person img { display: block; width: 100%; aspect-ratio: 1; height: auto; object-fit: cover; object-position: center 28%; filter: grayscale(1); transition: filter 650ms var(--ease-in-out); border-radius: var(--radius-card); background: var(--color-paper-2); }
+.person:focus-within img { filter: grayscale(0); }
+@media (hover: hover) { .person img:hover { filter: grayscale(0); } }
 .person-name { font-size: var(--text-sm); color: var(--color-ink-2); line-height: 1.4; transition: color var(--dur-short) var(--ease-out); }
 .person-lead img { aspect-ratio: 4 / 5; }
 .person-lead .person-name { font-size: var(--text-lg); color: var(--color-ink); }
