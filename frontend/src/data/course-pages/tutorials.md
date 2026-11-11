@@ -260,7 +260,7 @@ The CI/CD recipe link is coming soon.
 
 ---
 
-## Lecture 23: Final Deployment and Review
+## Lecture 22: Final Deployment and Review
 
 ### Formaggio live deployment
 - **Description**: Review Formaggio, propose a feature, push the change, and check the deployed result.
