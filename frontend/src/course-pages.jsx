@@ -98,7 +98,7 @@ function SchedulePage() {
             <span aria-hidden="true">—</span><span className="sr-only">{noLecture ? 'No lecture' : 'No published topic'}</span>
           </span>
         )}</td>
-        <td className="schedule-assessments">{quiz.trim() ? <span>{quiz.trim()}</span> : null}{milestone.trim() ? <a href={siteUrl('/#timeline')}>{milestone.trim()}<ArrowUpRight aria-hidden="true" /></a> : null}</td>
+        <td className="schedule-assessments">{quiz.trim() ? <span>{quiz.trim()}</span> : null}{milestone.trim() ? <a href={siteUrl('/milestones.html')}>{milestone.trim()}<ArrowUpRight aria-hidden="true" /></a> : null}</td>
       </tr>;
     })}</tbody></table></div>
     <div className="schedule-footnote"><p>Milestones are due at 10 pm Eastern.</p><a className="text-link" href={siteUrl('/policy.html#policy-on-usage-of-publicly-available-class-material')}>Course material policy<ArrowUpRight aria-hidden="true" /></a></div>
@@ -153,7 +153,7 @@ function ShowcasePage() {
       <div className="showcase-copy">
         <h1>Project<br />showcase.</h1>
         <p>Coming soon.</p>
-        <a className="text-link" href={siteUrl('/#timeline')}>Explore the milestones<ArrowUpRight aria-hidden="true" /></a>
+        <a className="text-link" href={siteUrl('/milestones.html')}>Explore the milestones<ArrowUpRight aria-hidden="true" /></a>
       </div>
       <div className="showcase-scene">
         <svg className="showcase-filter" width="0" height="0" aria-hidden="true">

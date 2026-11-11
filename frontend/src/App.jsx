@@ -8,8 +8,7 @@ import { homePage, pages } from './pages';
 
 const CourseGuide = import.meta.env.VITE_ENABLE_CHAT === 'true' ? CourseGuideComponent : null;
 
-const milestonesLink = { id: 'milestones', path: '/#timeline', label: 'Milestones' };
-const primaryLinks = [homePage, ...pages.flatMap(page => page.id === 'schedule' ? [page, milestonesLink] : [page])];
+const primaryLinks = [homePage, ...pages];
 
 function PageLinks({ current, primary = false, onNavigate }) {
   return (primary ? primaryLinks : pages).map(page => <a key={page.id} href={siteUrl(page.path)} aria-current={current === page.id ? 'page' : undefined} onClick={onNavigate}>{page.label}</a>);
@@ -39,7 +38,7 @@ export default function App({ Page, page }) {
     <main id="main" className={page.id === 'home' ? undefined : 'course-page'}><Page page={page} openGuide={CourseGuide ? openGuide : undefined} /></main>
     <footer className="site-footer container">
       <div className="footer-name"><a href={siteUrl('/')}>AC215</a><span>Production AI Systems</span><span>Fall 2026</span></div>
-      <nav aria-label="Course resources"><PageLinks current={page.id} /><a href={siteUrl('/readings.html')}>Supplementary readings</a><a href={siteUrl('/#timeline')}>Project milestones</a><a href={siteUrl('/#people')}>Teaching staff</a><a href={DISCUSSION_URL} target="_blank" rel="noreferrer">Discussion on Ed</a><a href={LECTURES_URL} target="_blank" rel="noreferrer">Lectures on Ed</a><a href="mailto:ac215harvard@gmail.com">Contact staff</a></nav>
+      <nav aria-label="Course resources"><PageLinks current={page.id} /><a href={siteUrl('/readings.html')}>Supplementary readings</a><a href={siteUrl('/#people')}>Teaching staff</a><a href={DISCUSSION_URL} target="_blank" rel="noreferrer">Discussion on Ed</a><a href={LECTURES_URL} target="_blank" rel="noreferrer">Lectures on Ed</a><a href="mailto:ac215harvard@gmail.com">Contact staff</a></nav>
       <p>Harvard John A. Paulson School of Engineering and Applied Sciences.</p>
     </footer>
     {CourseGuide ? <><button type="button" className="chat-launcher" aria-label="Open course chat" aria-expanded={guideOpen} aria-controls="course-chat"

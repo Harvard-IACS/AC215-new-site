@@ -13,6 +13,7 @@ const specs = [
   { path: '/tutorials.html', label: 'Tutorials', title: 'Tutorials | AC215', heading: /^Tutorials\.$/ },
   { path: '/faqs.html', label: 'FAQs', title: 'FAQs | AC215', heading: /^FAQs\.$/ },
   { path: '/showcase.html', label: 'Project showcase', title: 'Project showcase | AC215', heading: /Project\s*showcase\./ },
+  { path: '/milestones.html', label: 'Milestones', title: 'Milestones | AC215', heading: /^Milestones\.$/ },
 ];
 const schedule = JSON.parse(await readFile(new URL('../src/data/course-pages/schedule.json', import.meta.url), 'utf8'));
 const tutorialCount = (await readFile(new URL('../src/data/course-pages/tutorials.md', import.meta.url), 'utf8')).match(/^## Lecture \d+:/gm).length;
@@ -134,10 +135,11 @@ try {
       await expect(page.locator('.nav-links a[aria-current="page"]')).toHaveAttribute('href', sitePath(spec.path));
       await page.reload(); await ready(spec);
     }
+    await page.goBack(); await ready(specs[4]);
     await page.goBack(); await ready(specs[3]);
-    await page.goBack(); await ready(specs[2]);
-    await page.goForward(); await ready(specs[3]);
     await page.goForward(); await ready(specs[4]);
+    await page.goForward(); await ready(specs[5]);
+    await expect(page.locator('.milestone-list > li')).toHaveCount(5);
   });
   await check('Light/Dark/System preference survives page navigation and reload', async () => {
     await go(specs[0]); await theme('system', 'light');
@@ -265,7 +267,7 @@ try {
         const menu = page.locator('.mobile-navigation'); await menu.locator('summary').click(); await menu.getByRole('link', { name: 'Home', exact: true }).click();
       } else await page.getByRole('navigation', { name: 'Course navigation', exact: true }).getByRole('link', { name: 'Home', exact: true }).click();
       await page.waitForURL(url => url.pathname === sitePath('/')); await page.locator('.scene-canvas canvas').waitFor();
-      for (const [label, id] of [['Explore the course', 'curriculum'], ['See the project milestones', 'timeline'], ['Teaching staff', 'people']]) {
+      for (const [label, id] of [['Explore the course', 'curriculum'], ['Teaching staff', 'people']]) {
         await page.getByRole('link', { name: label, exact: true }).click(); const expected = width === 390 ? 64 + 24 : 88 + 40;
         await expect.poll(() => page.locator('#' + id).evaluate((element, expected) => Math.abs(element.getBoundingClientRect().top - expected), expected)).toBeLessThan(2);
       }

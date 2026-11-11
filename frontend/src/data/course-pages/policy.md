@@ -15,14 +15,14 @@ The table below reflects how we weight **steady project progress** and **underst
 
 | Milestone                                                    | Weight |
 | ------------------------------------------------------------ | ------ |
-| [MS1](/#timeline) | 8%     |
-| [MS2](/#timeline) | 14%    |
-| [MS3](/#timeline) | 18%    |
-| [MS4](/#timeline) | 18%    |
-| [MS5](/#timeline) | 24%    |
+| [MS1](/milestones.html) | 8%     |
+| [MS2](/milestones.html) | 14%    |
+| [MS3](/milestones.html) | 18%    |
+| [MS4](/milestones.html) | 18%    |
+| [MS5](/milestones.html) | 24%    |
 | Quizzes (6 total; best 4 count)                             | 18%    |
 
-For more information about the projects and milestones, you can click the links above or visit the [project page](/#timeline).
+For more information about the projects and milestones, you can click the links above or visit the [project page](/milestones.html).
 
 ---
 

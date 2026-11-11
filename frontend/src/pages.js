@@ -7,6 +7,7 @@ export const homePage = {
 
 export const pages = [
   { id: 'schedule', aliases: ['/schedule/'], path: '/schedule.html', label: 'Schedule', title: 'Schedule | AC215', description: 'The AC215 semester schedule: lectures, quizzes, and project milestones.' },
+  { id: 'milestones', aliases: ['/milestones/'], path: '/milestones.html', label: 'Milestones', title: 'Milestones | AC215', description: 'Deadlines and instructions for all five AC215 project milestones.' },
   { id: 'policy', aliases: ['/policy/'], path: '/policy.html', label: 'Policy', title: 'Course policy | AC215', description: 'AC215 grading, deadlines, collaboration, academic honesty, accessibility, and course policies.' },
   { id: 'tutorials', aliases: ['/tutorials_demo/'], path: '/tutorials.html', label: 'Tutorials', title: 'Tutorials | AC215', description: 'AC215 tutorials and demos, organized by lecture, with notebooks, repositories, and Ed lessons.' },
   { id: 'faqs', aliases: ['/faq/'], path: '/faqs.html', label: 'FAQs', title: 'FAQs | AC215', description: 'Answers to AC215 questions about lectures, quizzes, projects, teams, and course requirements.' },
@@ -26,6 +27,6 @@ export function pageForPath(pathname) {
 // Original course navigation that now opens a section on Home.
 export const legacyRedirects = [
   { path: '/staff/', target: '/#people' },
-  { path: '/projects/', target: '/#timeline' },
+  { path: '/projects/', target: '/milestones.html' },
   { path: '/calendar/', target: '/schedule.html' },
 ];

@@ -507,7 +507,9 @@ try {
   assert.equal(await courseResources.getByRole('link', {name:'Discussion on Ed',exact:true}).getAttribute('href'), 'https://edstem.org/us/courses/97373/discussion');
   assert.equal(await courseResources.getByRole('link', {name:'Lectures on Ed',exact:true}).getAttribute('href'), 'https://edstem.org/us/courses/97373/lessons');
   await page.getByRole('link', {name:'See the project milestones',exact:true}).click();
+  await page.waitForURL(url => url.pathname === '/milestones.html');
   await verifyMilestoneDialogs(page);
+  await page.goto(base);
   record('All five milestone windows show full instructions, trap and return focus, close by button and Escape, and navigate within the reading area');
 
   if (chatEnabled) {
@@ -681,7 +683,7 @@ try {
     }
     if (width === 390 || width === 1280) {
       const expectedTop = width === 390 ? 64 + 24 : 88 + 40;
-      for (const [label,id] of [['Explore the course','curriculum'],['See the project milestones','timeline'],['Teaching staff','people']]) {
+      for (const [label,id] of [['Explore the course','curriculum'],['Teaching staff','people']]) {
         await page.getByRole('link',{name:label,exact:true}).click();
         const heading = page.locator('#'+id);
         assert.equal(await heading.evaluate(element=>element.tagName),'H2',`${id} fragment does not target the actual heading`);

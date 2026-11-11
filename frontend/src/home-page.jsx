@@ -1,10 +1,9 @@
 import { siteUrl } from './site-url';
 import { useRef } from 'react';
-import { ArrowDownRight, ExternalLink, MessageCircle } from 'lucide-react';
+import { ArrowDownRight, ArrowUpRight, ExternalLink, MessageCircle } from 'lucide-react';
 import { SECScene } from './sec-scene';
-import { MilestoneDetail } from './milestone-detail';
 import CourseInformation from './course-information';
-import { DISCUSSION_URL, LECTURES_URL, instructors, milestones, questions, staff } from './data/course';
+import { DISCUSSION_URL, LECTURES_URL, instructors, questions, staff } from './data/course';
 
 function Person({ person, instructor = false }) {
   return <article className={instructor ? 'person person-lead' : 'person'}>
@@ -48,7 +47,7 @@ export default function HomePage({ openGuide }) {
             <h2 id="project-heading">One team.<br />A complete system.</h2>
             <p className="chapter-lead">Build your own AI application from problem to production.</p>
             <p>Teams of 3 to 5 connect modeling, data, infrastructure, and a usable interface. Every member learns the whole system.</p>
-            <a className="text-link" href="#timeline">See the project milestones <ArrowDownRight aria-hidden="true" /></a>
+            <a className="text-link" href={siteUrl('/milestones.html')}>See the project milestones <ArrowUpRight aria-hidden="true" /></a>
           </section>
           <section className="course-chapter classroom-chapter" aria-labelledby="classroom">
             <h2 id="classroom">Take your seat.</h2>
@@ -64,15 +63,6 @@ export default function HomePage({ openGuide }) {
         <div className="scene-column"><div className="scene-sticky"><SECScene trackRef={trackRef} /></div></div>
       </div>
       <CourseInformation />
-      <section className="timeline-section" aria-labelledby="timeline">
-        <div className="container">
-          <div className="section-intro"><h2 id="timeline">Five milestones.<br />One working system.</h2><p>Build with feedback from the teaching team.</p></div>
-          <ol className="milestone-list">{milestones.map((item, index) => <li key={item.id}>
-            <MilestoneDetail item={item} index={index} />
-          </li>)}</ol>
-          <p className="timeline-note">Due at 10 pm Eastern.</p>
-        </div>
-      </section>
       <section className="people-section container" aria-labelledby="people">
         <div className="section-intro"><h2 id="people">Learn with<br />Pavlos and Chris.</h2><a className="text-link" href={DISCUSSION_URL} target="_blank" rel="noreferrer">Connect with the teaching team <ExternalLink aria-hidden="true" /></a></div>
         <div className="people-layout"><div className="instructor-list">{instructors.map(person => <Person key={person.name} person={person} instructor />)}</div><div className="staff-list">{staff.map(person => <Person key={person.name} person={person} />)}</div></div>
