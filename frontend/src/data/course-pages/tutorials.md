@@ -236,13 +236,17 @@ _[Ed lesson](https://edstem.org/us/courses/97373/lessons/166044/)_
 ## Lecture 20: Deployment: Pulumi
 _[Ed lesson](https://edstem.org/us/courses/97373/lessons/166045/)_
 
-### Deployment of the full app to GCP (Manual)
-- **Description**: Deployment to GCP. Manual steps to deploy the app to GCP.
-- **GCP GitHub URL**: [App v3: Deployment to GCP (Manual)](https://github.com/dlops-io/cheese-app-v3?tab=readme-ov-file#deployment-to-gcp-manual)
+### Deploy to a VM by hand
+- **Description**: Set up a Compute Engine VM and run the Cheese App on it.
+- **GCP GitHub URL**: [Cheese App v3: Manual VM deployment](https://github.com/dlops-io/cheese-app-v3#tutorial-deploy-to-a-vm-by-hand)
 
-### Deployment to GCP with Pulumi
-- **Description**: Automate the same deployment with Pulumi: build and push images to GCR, create the compute instance, provision it, and launch the containers.
-- **GCP GitHub URL**: [App v3: Deployment to GCP (Single VM Instance)](https://github.com/dlops-io/cheese-app-v3?tab=readme-ov-file#deployment-to-gcp-single-vm-instance)
+### Deploy to a VM with Pulumi
+- **Description**: Use Pulumi to create cloud resources, push images to Artifact Registry, and deploy the Cheese App to a VM.
+- **GCP GitHub URL**: [Cheese App v3: VM deployment with Pulumi](https://github.com/dlops-io/cheese-app-v3#tutorial-deploy-to-a-vm-with-pulumi)
+
+### Deploy to Kubernetes with Pulumi (GKE)
+- **Description**: Reuse the images in Artifact Registry, create a GKE cluster with Pulumi, and deploy the same app.
+- **GCP GitHub URL**: [Cheese App v3: GKE deployment](https://github.com/dlops-io/cheese-app-v3#tutorial-kubernetes-on-gke)
 
 ---
 
