@@ -201,8 +201,7 @@ html[data-theme='light'] .classroom-still-dark { opacity: 0; }
 .person a:is(:hover,:focus-visible) { color:var(--color-focus); }
 .enrollment-notice { color:var(--color-ink-2); font-size:var(--text-sm); }
 .course-information { padding-block:var(--section-gap-s); }
-.course-information-prose > h3 { font-size:var(--text-2xl); margin-top:var(--space-2xl); }
-.course-information-prose > h3:first-child { margin-top:0; }
+.course-prose.course-information-prose > h3 { font-size:var(--text-2xl); margin-top:0; }
 .course-information-prose > h4 { font-size:var(--text-lg); font-weight:400; }
 .course-information-prose hr { margin-block:var(--space-2xl); border:0; border-top:1px solid var(--color-rule); }
 .ask-section { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: var(--space-2xl); padding-block: 0 var(--section-gap); }

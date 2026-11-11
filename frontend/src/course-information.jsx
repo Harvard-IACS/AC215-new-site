@@ -3,13 +3,7 @@ import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import overview from './data/course-pages/overview.md?raw';
 
-const sectionIndex = [
-  ['course-overview', 'Course overview'],
-  ['logistics-tools', 'Logistics & tools'],
-  ['prerequisites', 'Prerequisites'],
-  ['course-components', 'Course components'],
-  ['team-projects', 'Team projects'],
-];
+const sectionIndex = Array.from(overview.matchAll(/^## (.+)$/gm), ([, title]) => [headingId(title), title]);
 
 function headingId(text) {
   return String(text).toLowerCase().replace(/[^a-z0-9\s-]/g, '').trim().replace(/\s+/g, '-');

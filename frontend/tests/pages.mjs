@@ -118,7 +118,11 @@ try {
     await expect(information).toContainText('Formaggio');
     await expect(information.locator('#course-topics-overview + p + ol > li')).toHaveCount(14);
     const sectionLinks = await information.getByRole('navigation', { name: 'Course information sections' }).getByRole('link').evaluateAll(links => links.map(link => link.getAttribute('href')));
-    assert.ok(sectionLinks.every(href => href.startsWith('#')), 'Section menus must only scroll within the current page');
+    assert.deepEqual(sectionLinks, [
+      '#course-introduction', '#learning-objectives', '#course-topics-overview', '#logistics',
+      '#technologies-and-platforms', '#prerequisites', '#course-components', '#team-projects',
+    ]);
+    await expect(information.locator('.course-information-prose > hr')).toHaveCount(7);
     await expect(page.locator('.site-footer').getByRole('link', { name: 'Supplementary readings', exact: true })).toHaveAttribute('href', sitePath('/readings.html'));
     await information.getByRole('link', { name: 'Prerequisites', exact: true }).click();
     await expect(page.getByRole('heading', { name: 'Prerequisites', exact: true })).toBeInViewport();

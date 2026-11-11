@@ -1,6 +1,4 @@
-## Course Overview
-
-### Course Introduction
+## Course Introduction
 
 In today’s AI-driven world, building a model is only half the journey. The real challenge is turning that model into a system that is reliable, scalable, and usable in practice.
 
@@ -10,14 +8,18 @@ You will work with containerization, cloud infrastructure, data pipelines, and m
 
 The goal is simple: by the end of the course, you should be able to design, build, and deploy a complete AI system.
 
-### Learning Objectives
+---
+
+## Learning Objectives
 
 - Understand the MLOps, LLMOps, and AIOps ecosystem and its role in modern AI systems.
 - Deploy and scale AI models, particularly LLM-based systems.
 - Work with containerization, cloud infrastructure, data pipelines, and advanced training workflows.
 - Build and operate scalable AI applications.
 
-### Course Topics Overview
+---
+
+## Course Topics Overview
 
 We have designed an in-depth curriculum to ensure a comprehensive understanding of modern AI systems and MLOps. The topics include (see the [full topics list](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vSaPiVfDbW8OKMwQQZrOp8SiduXsg1rNHhMjUNjJNAlBrXrIxF6K5SiNiq53upolQ/pubhtml?gid=182104043&single=true)):
 
@@ -66,20 +68,22 @@ We have designed an in-depth curriculum to ensure a comprehensive understanding 
 
 ---
 
-## Logistics & Tools
-
-### Lectures
+## Logistics
 
 - **Location:** SEC 1.321
 - **Meeting Time:** Tuesday and Thursday 12:45 - 2:45 PM
 - **For Extension Students Only:** Via Zoom
 
-### Technologies and Platforms
+---
+
+## Technologies and Platforms
 We use TensorFlow and PyTorch for examples, with a primary focus on Google Cloud Platform (GCP). 
 
 Equivalent materials are available for AWS. However, we will not demonstrate AWS in lectures, and support for AWS-specific issues will be limited.
 
-### Prerequisites
+---
+
+## Prerequisites
 
 You are expected to be comfortable with the following:
 
@@ -126,7 +130,9 @@ If you are unsure whether you meet these prerequisites, a simple guideline is:
 
 - **Supplementary Readings:** Curated materials to deepen understanding. This field moves fast, so developing the habit of independent reading is part of the course.
 
-### Team Projects
+---
+
+## Team Projects
 
 You will **design and build your own project** in a team (3-5 members). The staff will help you scope and refine the idea, but the direction and execution are yours.
 
@@ -154,4 +160,3 @@ The expectation is a project comparable in scope to a small production-ready app
 
 **In summary:**  
 The goal is simple: build something real. Your project should be an end-to-end solution that includes modeling, infrastructure, and a usable interface.
-
