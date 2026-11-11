@@ -88,9 +88,16 @@ function SchedulePage() {
     <div className="schedule-table-wrap"><table className="schedule-table"><caption className="sr-only">Fall 2026 AC215 schedule. Milestone deadlines are at 10 pm Eastern. Blank topics have not been listed in the published schedule.</caption><thead><tr><th scope="col">Week</th><th scope="col">Date</th><th scope="col">Lecture</th><th scope="col">Quizzes &amp; milestones</th></tr></thead><tbody>{rows.map(row => {
       const [week, date, session, topic, quiz, , milestone] = row;
       const [month, day] = date.split('/');
-      return <tr key={date} className={!session.trim() && topic.trim() ? 'schedule-event' : undefined}>
+      const topicText = topic.trim();
+      const noLecture = topicText === 'No lecture';
+      const isEvent = !session.trim() && topicText && !noLecture;
+      return <tr key={date} className={isEvent ? 'schedule-event' : undefined}>
         <td className="schedule-week">{week}</td><th scope="row" className="schedule-date"><time dateTime={'2026-' + month.padStart(2, '0') + '-' + day.padStart(2, '0')}>{monthNames[month]} {day}</time></th>
-        <td className="schedule-topic">{session.trim() ? <a href={siteUrl('/tutorials.html#lecture-' + session.trim())}><span className="session-number">{session.trim().padStart(2, '0')}</span><span>{topic.trim()}</span><ArrowUpRight aria-hidden="true" /></a> : <span>{topic.trim() ? eventTitle(topic) : <span className="muted" aria-label="No published topic">—</span>}</span>}</td>
+        <td className="schedule-topic">{session.trim() ? <a href={siteUrl('/tutorials.html#lecture-' + session.trim())}><span className="session-number">{session.trim().padStart(2, '0')}</span><span>{topicText}</span><ArrowUpRight aria-hidden="true" /></a> : (
+          isEvent ? <span>{eventTitle(topicText)}</span> : <span className="muted">
+            <span aria-hidden="true">—</span><span className="sr-only">{noLecture ? 'No lecture' : 'No published topic'}</span>
+          </span>
+        )}</td>
         <td className="schedule-assessments">{quiz.trim() ? <span>{quiz.trim()}</span> : null}{milestone.trim() ? <a href={siteUrl('/#timeline')}>{milestone.trim()}<ArrowUpRight aria-hidden="true" /></a> : null}</td>
       </tr>;
     })}</tbody></table></div>
