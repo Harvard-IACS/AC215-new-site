@@ -1,5 +1,6 @@
 import { siteUrl } from './site-url';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
+import SectionNav, { useActiveSection } from './section-nav';
 import { ArrowUpRight, Check, ChevronDown, ExternalLink, MessageCircle, Search, X } from 'lucide-react';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -69,8 +70,17 @@ function SearchBox({ value, onChange, label, placeholder }) {
   return <div className="page-search"><Search aria-hidden="true" /><Input type="search" value={value} onChange={event => onChange(event.target.value)} aria-label={label} placeholder={placeholder} />{value ? <button type="button" aria-label={'Clear ' + label.toLowerCase()} onClick={() => onChange('')}><X aria-hidden="true" /></button> : null}</div>;
 }
 
-function PageIndex({ items, label = 'On this page' }) {
-  return <nav className="page-index" aria-label={label}><p>{label}</p>{items.map(item => <a key={item.id} href={'#' + item.id} title={item.title}>{item.number ? <span className="page-index-number">{String(item.number).padStart(2, '0')}</span> : null}<span className="page-index-label">{item.title}</span></a>)}</nav>;
+function PageIndex({ items, label = 'On this page', activeSection }) {
+  const content = <>
+    <p>{label}</p>
+    {items.map(item => <a key={item.id} href={'#' + item.id} title={item.title} aria-current={item.id === activeSection ? 'location' : undefined}>
+      {item.number ? <span className="page-index-number">{String(item.number).padStart(2, '0')}</span> : null}
+      <span className="page-index-label">{item.title}</span>
+    </a>)}
+  </>;
+  return activeSection
+    ? <SectionNav className="page-index" label={label} activeSection={activeSection}>{content}</SectionNav>
+    : <nav className="page-index" aria-label={label}>{content}</nav>;
 }
 
 function SchedulePage() {
@@ -114,11 +124,15 @@ function PolicyPage() {
 
 function TutorialsPage() {
   const [query, setQuery] = useState('');
-  const matches = tutorials.filter(item => (item.title + ' ' + item.body).toLowerCase().includes(query.trim().toLowerCase()));
+  const matches = useMemo(() => {
+    const term = query.trim().toLowerCase();
+    return tutorials.filter(item => (item.title + ' ' + item.body).toLowerCase().includes(term));
+  }, [query]);
+  const activeSection = useActiveSection(matches);
   return <div className="container page-content tutorials-page">
     <PageIntro title="Tutorials." action={<ResourceLink href={LECTURES_URL}>All lessons on Ed</ResourceLink>}>Notebooks, repositories, and demos, organized by lecture.</PageIntro>
     <div className="page-toolbar"><SearchBox value={query} onChange={setQuery} label="Search tutorials" placeholder="Search topics, tools, or tutorials…" /><p role="status">{matches.length} {matches.length === 1 ? 'lecture' : 'lectures'}</p></div>
-    <div className="document-layout"><PageIndex items={matches} label="Lectures" /><div className="document-sections">{matches.length ? matches.map(item => <section className="document-section tutorial-section" key={item.id} aria-labelledby={item.id}>
+    <div className="document-layout"><PageIndex items={matches} label="Lectures" activeSection={activeSection} /><div className="document-sections">{matches.length ? matches.map(item => <section className="document-section tutorial-section" key={item.id} aria-labelledby={item.id}>
       <div className="tutorial-heading"><h2 id={item.id} tabIndex={-1}>Lecture {item.number}: {item.title}</h2>{item.lesson && <ResourceLink href={item.lesson}>Ed lesson</ResourceLink>}</div>
       <div className="course-prose tutorial-prose"><CourseMarkdown>{item.body}</CourseMarkdown></div>
     </section>) : <EmptySearch query={query} onClear={() => setQuery('')} noun="tutorials" />}</div></div>

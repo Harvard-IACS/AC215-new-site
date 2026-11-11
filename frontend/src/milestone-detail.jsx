@@ -2,7 +2,7 @@ import { Dialog } from '@base-ui/react/dialog';
 import { lazy, Suspense, useRef, useState } from 'react';
 import { ArrowUpRight, X } from 'lucide-react';
 import { milestoneInstructions } from './data/milestone-content';
-import MilestoneSectionNav from './milestone-section-nav';
+import SectionNav from './section-nav';
 
 const MilestoneMarkdown = lazy(() => import('./milestone-markdown'));
 
@@ -46,9 +46,9 @@ export function MilestoneDetail({ item, index }) {
           <Dialog.Close className="milestone-close" aria-label="Close milestone instructions"><X aria-hidden="true" /></Dialog.Close>
         </header>
         <div className="milestone-modal-layout">
-          <MilestoneSectionNav className="milestone-contents" label={item.id+' instruction sections'} activeSection={activeSection}>
+          <SectionNav className="milestone-contents" label={item.id+' instruction sections'} activeSection={activeSection}>
             {instruction.sections.map(section => <button key={section.id} type="button" aria-current={section.id === activeSection ? 'location' : undefined} onClick={() => jump(section.id)}>{section.title}</button>)}
-          </MilestoneSectionNav>
+          </SectionNav>
           <div className="milestone-reading" tabIndex={0} aria-label="Milestone instructions" onScroll={trackSection}>
             <Suspense fallback={<p role="status">Loading instructions…</p>}>{instruction.sections.map(section=><section id={item.id+'-'+section.id} key={section.id} className="milestone-instruction-section">
               <h3>{section.title}</h3><div className="milestone-prose"><MilestoneMarkdown>{section.body}</MilestoneMarkdown></div>
