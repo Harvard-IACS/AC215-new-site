@@ -10,6 +10,12 @@ function headingId(text) {
   return String(text).toLowerCase().replace(/[^a-z0-9\s-]/g, '').trim().replace(/\s+/g, '-');
 }
 
+const markdownComponents = {
+  h2: ({ children }) => <h3 id={headingId(children)} tabIndex={-1}>{children}</h3>,
+  h3: ({ children }) => <h4 id={headingId(children)} tabIndex={-1}>{children}</h4>,
+  a: ({ href, children }) => <a href={siteUrl(href)} {...(/^https?:/.test(href || '') ? { target: '_blank', rel: 'noreferrer' } : {})}>{children}</a>,
+};
+
 export default function CourseInformation() {
   const activeSection = useActiveSection(sectionIndex);
   return <section className="course-information container" aria-labelledby="course-information">
@@ -23,11 +29,7 @@ export default function CourseInformation() {
         {sectionIndex.map(({ id, title }) => <a key={id} href={'#' + id} aria-current={id === activeSection ? 'location' : undefined}>{title}</a>)}
       </SectionNav>
       <div className="course-prose course-information-prose">
-        <Markdown remarkPlugins={[remarkGfm]} components={{
-          h2: ({ children }) => <h3 id={headingId(children)} tabIndex={-1}>{children}</h3>,
-          h3: ({ children }) => <h4 id={headingId(children)} tabIndex={-1}>{children}</h4>,
-          a: ({ href, children }) => <a href={siteUrl(href)} {...(/^https?:/.test(href || '') ? { target: '_blank', rel: 'noreferrer' } : {})}>{children}</a>,
-        }}>{overview}</Markdown>
+        <Markdown remarkPlugins={[remarkGfm]} components={markdownComponents}>{overview}</Markdown>
       </div>
     </div>
   </section>;
