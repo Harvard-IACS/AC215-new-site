@@ -8,8 +8,11 @@ import { homePage, pages } from './pages';
 
 const CourseGuide = import.meta.env.VITE_ENABLE_CHAT === 'true' ? CourseGuideComponent : null;
 
-function PageLinks({ current, includeHome = false }) {
-  return (includeHome ? [homePage, ...pages] : pages).map(page => <a key={page.id} href={siteUrl(page.path)} aria-current={current === page.id ? 'page' : undefined}>{page.label}</a>);
+const milestonesLink = { id: 'milestones', path: '/#timeline', label: 'Milestones' };
+const primaryLinks = [homePage, ...pages.flatMap(page => page.id === 'schedule' ? [page, milestonesLink] : [page])];
+
+function PageLinks({ current, primary = false, onNavigate }) {
+  return (primary ? primaryLinks : pages).map(page => <a key={page.id} href={siteUrl(page.path)} aria-current={current === page.id ? 'page' : undefined} onClick={onNavigate}>{page.label}</a>);
 }
 
 export default function App({ Page, page }) {
@@ -25,11 +28,12 @@ export default function App({ Page, page }) {
         </span>
         <span className="wordmark">AC 215</span>
       </div>
-      <nav aria-label="Course navigation" className="nav-links"><PageLinks current={page.id} includeHome /></nav>
+      <nav aria-label="Course navigation" className="nav-links"><PageLinks current={page.id} primary /></nav>
       <ThemeControls />
       <details className="mobile-navigation" onKeyDown={event => { if (event.key === 'Escape') { event.currentTarget.open = false; event.currentTarget.querySelector('summary').focus(); } }}>
         <summary><Menu aria-hidden="true" /><span>Menu</span></summary>
-        <nav aria-label="Mobile course navigation"><PageLinks current={page.id} includeHome /></nav>
+        <nav aria-label="Mobile course navigation"><PageLinks current={page.id} primary
+          onNavigate={event => { event.currentTarget.closest('details').open = false; }} /></nav>
       </details>
     </header>
     <main id="main" className={page.id === 'home' ? undefined : 'course-page'}><Page page={page} openGuide={CourseGuide ? openGuide : undefined} /></main>
