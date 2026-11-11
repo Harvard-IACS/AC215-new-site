@@ -250,28 +250,17 @@ _[Ed lesson](https://edstem.org/us/courses/97373/lessons/166045/)_
 
 ---
 
-## Lecture 21: Automating Software Development: CI/CD with GitHub Actions and other tools II
-_[Ed lesson](https://edstem.org/us/courses/97373/lessons/166046/)_
+## Lecture 21: A recipe on all CI/CD all together
 
-### Remote CI/CD with GitHub Actions
-- **Description**: CI pipeline on GitHub Actions: build container, lint and format, test, summary
-- **GCP GitHub URL**: [GitHub Actions Remote CI/CD](https://github.com/dlops-io/cheese-app-ci-cd/blob/main/README.md#part-5-github-actions-remote-ci)
+The CI/CD recipe link is coming soon.
 
----
-
-## Lecture 22: Scaling: Kubernetes (cloud)
-_[Ed lesson](https://edstem.org/us/courses/97373/lessons/166047/)_
-
-### Deployment with Scaling using Kubernetes (cloud)
-- **Description**: Deployment with Scaling using Kubernetes
-- **GCP GitHub URL**: [App v3: Deployment with Scaling using Kubernetes](https://github.com/dlops-io/cheese-app-v3?tab=readme-ov-file#deployment-with-scaling-using-kubernetes)
+### GitHub Actions reference
+- **Description**: Review how GitHub Actions builds and tests the Cheese App.
+- **GCP GitHub URL**: [GitHub Actions: Remote CI](https://github.com/dlops-io/cheese-app-ci-cd/blob/main/README.md#part-5-github-actions-remote-ci)
 
 ---
 
 ## Lecture 23: Final Deployment and Review
-_[Ed lesson](https://edstem.org/us/courses/97373/lessons/166048/)_
 
-### Continuous Integration and Continuous Deployment
-- **Description**: Continuous Integration and Continuous Deployment
-- **GCP GitHub URL**: [App v4: Continuous Integration and Continuous Deployment](https://github.com/dlops-io/cheese-app-v4#cheese-app---automation)
-- **AWS GitHub URL**: [App: AWS - Continuous Integration and Continuous Deployment](https://github.com/dlops-io/cheese-app-aws)
+### Formaggio live deployment
+- **Description**: Review Formaggio, propose a feature, push the change, and check the deployed result.

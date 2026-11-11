@@ -112,7 +112,7 @@ function TutorialsPage() {
     <PageIntro title="Tutorials." action={<ResourceLink href={LECTURES_URL}>All lessons on Ed</ResourceLink>}>Notebooks, repositories, and demos, organized by lecture.</PageIntro>
     <div className="page-toolbar"><SearchBox value={query} onChange={setQuery} label="Search tutorials" placeholder="Search topics, tools, or tutorials…" /><p role="status">{matches.length} {matches.length === 1 ? 'lecture' : 'lectures'}</p></div>
     <div className="document-layout"><PageIndex items={matches} label="Lectures" /><div className="document-sections">{matches.length ? matches.map(item => <section className="document-section tutorial-section" key={item.id} aria-labelledby={item.id}>
-      <div className="tutorial-heading"><h2 id={item.id} tabIndex={-1}>Lecture {item.number}: {item.title}</h2><ResourceLink href={item.lesson}>Ed lesson</ResourceLink></div>
+      <div className="tutorial-heading"><h2 id={item.id} tabIndex={-1}>Lecture {item.number}: {item.title}</h2>{item.lesson && <ResourceLink href={item.lesson}>Ed lesson</ResourceLink>}</div>
       <div className="course-prose tutorial-prose"><CourseMarkdown>{item.body}</CourseMarkdown></div>
     </section>) : <EmptySearch query={query} onClear={() => setQuery('')} noun="tutorials" />}</div></div>
   </div>;
