@@ -1,28 +1,16 @@
 import { Dialog } from '@base-ui/react/dialog';
-import { lazy, Suspense, useEffect, useRef, useState } from 'react';
+import { lazy, Suspense, useRef, useState } from 'react';
 import { ArrowUpRight, X } from 'lucide-react';
 import { milestoneInstructions } from './data/milestone-content';
+import MilestoneSectionNav from './milestone-section-nav';
 
 const MilestoneMarkdown = lazy(() => import('./milestone-markdown'));
 
 export function MilestoneDetail({ item, index }) {
   const titleRef = useRef(null);
-  const contentsRef = useRef(null);
   const instruction = milestoneInstructions[index];
   const firstSection = instruction.sections[0].id;
   const [activeSection, setActiveSection] = useState(firstSection);
-
-  useEffect(() => {
-    const contents = contentsRef.current;
-    const current = contents?.querySelector('[aria-current="location"]');
-    if (!current) return;
-    const bounds = contents.getBoundingClientRect();
-    const entry = current.getBoundingClientRect();
-    contents.scrollBy({
-      left: Math.min(0, entry.left - bounds.left) || Math.max(0, entry.right - bounds.right),
-      top: Math.min(0, entry.top - bounds.top) || Math.max(0, entry.bottom - bounds.bottom),
-    });
-  }, [activeSection]);
 
   function trackSection(event) {
     const reading = event.currentTarget;
@@ -58,7 +46,9 @@ export function MilestoneDetail({ item, index }) {
           <Dialog.Close className="milestone-close" aria-label="Close milestone instructions"><X aria-hidden="true" /></Dialog.Close>
         </header>
         <div className="milestone-modal-layout">
-          <nav ref={contentsRef} className="milestone-contents" aria-label={item.id+' instruction sections'}>{instruction.sections.map(section=><button key={section.id} type="button" aria-current={section.id === activeSection ? 'location' : undefined} onClick={()=>jump(section.id)}>{section.title}</button>)}</nav>
+          <MilestoneSectionNav className="milestone-contents" label={item.id+' instruction sections'} activeSection={activeSection}>
+            {instruction.sections.map(section => <button key={section.id} type="button" aria-current={section.id === activeSection ? 'location' : undefined} onClick={() => jump(section.id)}>{section.title}</button>)}
+          </MilestoneSectionNav>
           <div className="milestone-reading" tabIndex={0} aria-label="Milestone instructions" onScroll={trackSection}>
             <Suspense fallback={<p role="status">Loading instructions…</p>}>{instruction.sections.map(section=><section id={item.id+'-'+section.id} key={section.id} className="milestone-instruction-section">
               <h3>{section.title}</h3><div className="milestone-prose"><MilestoneMarkdown>{section.body}</MilestoneMarkdown></div>

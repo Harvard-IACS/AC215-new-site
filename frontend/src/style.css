@@ -416,10 +416,29 @@ body { transition: background-color var(--dur-theme) var(--ease-in-out), color v
 .milestone-contents { padding:var(--space-xl) var(--space-lg); display:flex; flex-direction:column; gap:var(--space-2xs); overflow:auto; border-right:1px solid var(--color-rule); }
 .milestone-contents button { text-align:left; padding:var(--space-sm); min-height:44px; line-height:1.4; color:var(--color-muted); font-size:13px; background:transparent; border:0; border-radius:8px; cursor:pointer; }
 .milestone-contents button:hover { color:var(--color-focus); background:var(--color-paper-2); }
-.milestone-contents button[aria-current='location'] {
-  color: var(--color-focus);
-  background: var(--color-paper-3);
-  box-shadow: inset 3px 0 var(--color-focus);
+.milestone-section-nav { isolation:isolate; }
+.milestone-contents.milestone-section-nav { position:relative; }
+.milestone-section-nav::before {
+  content:'';
+  position:absolute;
+  inset:0 auto auto 0;
+  z-index:-1;
+  pointer-events:none;
+  width:var(--highlight-width, 0px);
+  height:var(--highlight-height, 0px);
+  transform:translate(var(--highlight-x, 0px),var(--highlight-y, 0px));
+  background:var(--color-paper-3);
+  border-radius:8px;
+  box-shadow:inset 3px 0 var(--color-focus);
+}
+.milestone-section-nav :is(a, button)[aria-current='location'] { color:var(--color-focus); background:transparent; }
+@media (prefers-reduced-motion:no-preference) {
+  .milestone-section-nav::before {
+    transition:transform var(--dur-short) var(--ease-out), width var(--dur-short) var(--ease-out), height var(--dur-short) var(--ease-out);
+  }
+}
+@media (max-width:760px) {
+  .milestone-page .milestone-section-nav { position:relative; }
 }
 .milestone-reading { padding:var(--space-xl) var(--space-2xl) var(--space-2xl); min-height:0; overflow:auto; overscroll-behavior:contain; scroll-padding-top:var(--space-lg); }
 .milestone-instruction-section + .milestone-instruction-section { margin-top:var(--space-2xl); padding-top:var(--space-xl); border-top:1px solid var(--color-rule); }
