@@ -16,6 +16,7 @@ export default function MilestoneSectionNav({ className, label, activeSection, c
     }
 
     moveHighlight();
+    nav.dataset.highlightReady = '';
     const bounds = nav.getBoundingClientRect();
     const entry = current.getBoundingClientRect();
     nav.scrollBy({

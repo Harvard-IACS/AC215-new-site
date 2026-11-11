@@ -418,7 +418,7 @@ body { transition: background-color var(--dur-theme) var(--ease-in-out), color v
 .milestone-contents button:hover { color:var(--color-focus); background:var(--color-paper-2); }
 .milestone-section-nav { isolation:isolate; }
 .milestone-contents.milestone-section-nav { position:relative; }
-.milestone-section-nav::before {
+.milestone-section-nav[data-highlight-ready]::before {
   content:'';
   position:absolute;
   inset:0 auto auto 0;
