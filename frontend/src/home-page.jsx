@@ -7,8 +7,17 @@ import { DISCUSSION_URL, LECTURES_URL, instructors, questions, staff } from './d
 
 function Person({ person, instructor = false }) {
   return <article className={instructor ? 'person person-lead' : 'person'}>
-    <img src={siteUrl(person.image)} width="400" height="480" loading="lazy" alt="" />
-    <a className="person-name" href={person.url} target="_blank" rel="noreferrer">{person.name}</a>
+    <img
+      src={siteUrl(person.image)}
+      width="400"
+      height="480"
+      loading="lazy"
+      alt=""
+      style={person.imagePosition ? { objectPosition: person.imagePosition } : undefined}
+    />
+    {person.url
+      ? <a className="person-name" href={person.url} target="_blank" rel="noreferrer">{person.name}</a>
+      : <span className="person-name">{person.name}</span>}
     {instructor ? <span className="person-role">{person.role}</span> : null}
     {person.website ? <a className="person-role" href={person.website.url} target="_blank" rel="noreferrer">{person.website.label}</a> : null}
   </article>;
