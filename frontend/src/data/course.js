@@ -26,5 +26,6 @@ export const staff = [
     image: '/staff/octavian-balatel.jpg',
     imageCrop: { objectPosition: 'center', transform: 'scale(3.44)', transformOrigin: 'center 35%' },
   },
+  { name: 'Patrick Ohiomoba', image: '/staff/patrick-ohiomoba.png', imagePosition: 'center top' },
 ];
 export const questions = ['What will I build in AC215?', 'What is due for milestone 3?', 'What are the prerequisites?'];

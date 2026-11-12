@@ -36,7 +36,7 @@ An introductory machine-learning course with Python programming is a useful prep
 
 Instructors: Pavlos Protopapas and Chris Gumb.
 
-Course staff: Rashmi Banthia, Shivas Jayaram, Alyssa Mia Taliotis, Javier Machin, Raima Afra, Teodor Malchev, Yasmine Morrison, Yuan Tang, Peter Chen, and Octavian Balatel.
+Course staff: Rashmi Banthia, Shivas Jayaram, Alyssa Mia Taliotis, Javier Machin, Raima Afra, Teodor Malchev, Yasmine Morrison, Yuan Tang, Peter Chen, Octavian Balatel, and Patrick Ohiomoba.
 
 Before team formation, TF support hours provide general help. After MS1, teams meet weekly with their assigned TF for project progress and feedback.
 
