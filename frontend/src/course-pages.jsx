@@ -115,10 +115,15 @@ function SchedulePage() {
   </div>;
 }
 
+function PolicyIndex() {
+  const activeSection = useActiveSection(policies);
+  return <PageIndex items={policies} activeSection={activeSection} />;
+}
+
 function PolicyPage() {
   return <div className="container page-content policy-page">
     <PageIntro title="Course policy." action={<a className="text-link" href="mailto:ac215harvard@gmail.com">Contact staff<ArrowUpRight aria-hidden="true" /></a>}>Grading, expectations, and working together.</PageIntro>
-    <div className="document-layout"><PageIndex items={policies} /><div className="document-sections">{policies.map(item => <section className="document-section" key={item.id} aria-labelledby={item.id}><div className="document-section-heading"><h2 id={item.id} tabIndex={-1}>{item.title}</h2></div><div className="course-prose"><CourseMarkdown>{item.body}</CourseMarkdown></div></section>)}</div></div>
+    <div className="document-layout"><PolicyIndex /><div className="document-sections">{policies.map(item => <section className="document-section" key={item.id} aria-labelledby={item.id}><div className="document-section-heading"><h2 id={item.id} tabIndex={-1}>{item.title}</h2></div><div className="course-prose"><CourseMarkdown>{item.body}</CourseMarkdown></div></section>)}</div></div>
   </div>;
 }
 

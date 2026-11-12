@@ -196,10 +196,14 @@ try {
     await page.getByRole('button', { name: 'Clear search', exact: true }).click(); await expect(page.getByLabel('Search questions')).toHaveValue(''); await expect(page.locator('.faq-item')).toHaveCount(faqCount);
     await screenshot('faqs-desktop');
   });
-  await check('Policy anchors and complete grade table; Showcase coming-soon state', async () => {
+  await check('Policy scroll highlight, anchors and grade table; Showcase coming-soon state', async () => {
     await go(specs[1]); const index = page.getByRole('navigation', { name: 'On this page', exact: true });
+    await page.locator('#late-policy').evaluate(heading => heading.scrollIntoView({ behavior: 'instant' }));
+    await expect(index.locator('a[aria-current="location"]')).toHaveAttribute('href', '#late-policy');
+    assert.equal(new URL(page.url()).hash, '');
     for (const id of ['grade-distribution', 'late-policy', 'policy-on-usage-of-publicly-available-class-material']) {
       await index.locator(`a[href="#${id}"]`).click(); assert.equal(new URL(page.url()).hash, '#' + id); await expect(page.locator('#' + id)).toBeInViewport();
+      await expect(index.locator('a[aria-current="location"]')).toHaveAttribute('href', '#' + id);
     }
     const weights = await page.locator('.course-prose table tbody tr').evaluateAll(rows => rows.map(row => parseFloat(row.lastElementChild.textContent)));
     assert.deepEqual(weights, [8, 14, 18, 18, 24, 18]); assert.equal(weights.reduce((sum, value) => sum + value, 0), 100);
