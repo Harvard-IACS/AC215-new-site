@@ -284,6 +284,12 @@
     "source": "User-supplied name and portrait",
     "asset": "frontend/public/staff/peter-chen.jpg"
   },
+  "octavian_balatel_staff_addition": {
+    "updated_on": "2026-11-12",
+    "source": "User-supplied name, teaching fellow role, and photo",
+    "asset": "frontend/public/staff/octavian-balatel.jpg",
+    "presentation": "Head-and-shoulders crop in the staff card"
+  },
   "portrait_interaction": {
     "updated_on": "2026-11-10",
     "request": "Reveal each teaching-team portrait in its original colors on mouse hover, with a gradual transition.",

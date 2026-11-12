@@ -126,7 +126,7 @@ try {
     await expect(page.locator('.site-footer').getByRole('link', { name: 'Supplementary readings', exact: true })).toHaveAttribute('href', sitePath('/readings.html'));
     await information.getByRole('link', { name: 'Prerequisites', exact: true }).click();
     await expect(page.getByRole('heading', { name: 'Prerequisites', exact: true })).toBeInViewport();
-    await expect(page.locator('.people-section .person-name')).toHaveCount(11);
+    await expect(page.locator('.people-section .person-name')).toHaveCount(12);
     await expect(page.locator('noscript, .milestone-page-links')).toHaveCount(0);
     await clearViewportOverflow(); await screenshot('home-course-information-desktop');
   });

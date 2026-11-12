@@ -21,5 +21,10 @@ export const staff = [
   { name: 'Yasmine Morrison', image: '/staff/staff-8.png', url: 'https://www.linkedin.com/in/yasminemorrison/' },
   { name: 'Yuan Tang', image: '/staff/staff-9.png', url: 'https://www.linkedin.com/in/hiyuantang/' },
   { name: 'Peter Chen', image: '/staff/peter-chen.jpg', imagePosition: 'center 75%' },
+  {
+    name: 'Octavian Balatel',
+    image: '/staff/octavian-balatel.jpg',
+    imageCrop: { objectPosition: 'center', transform: 'scale(3.44)', transformOrigin: 'center 35%' },
+  },
 ];
 export const questions = ['What will I build in AC215?', 'What is due for milestone 3?', 'What are the prerequisites?'];

@@ -6,15 +6,19 @@ import CourseInformation from './course-information';
 import { DISCUSSION_URL, LECTURES_URL, instructors, questions, staff } from './data/course';
 
 function Person({ person, instructor = false }) {
-  return <article className={instructor ? 'person person-lead' : 'person'}>
+  const imageStyle = person.imageCrop ?? (person.imagePosition ? { objectPosition: person.imagePosition } : undefined);
+  const portrait = (
     <img
       src={siteUrl(person.image)}
       width="400"
       height="480"
       loading="lazy"
       alt=""
-      style={person.imagePosition ? { objectPosition: person.imagePosition } : undefined}
+      style={imageStyle}
     />
+  );
+  return <article className={instructor ? 'person person-lead' : 'person'}>
+    {person.imageCrop ? <div className="person-portrait-crop">{portrait}</div> : portrait}
     {person.url
       ? <a className="person-name" href={person.url} target="_blank" rel="noreferrer">{person.name}</a>
       : <span className="person-name">{person.name}</span>}
