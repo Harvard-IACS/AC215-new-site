@@ -228,9 +228,11 @@ _[Ed lesson](https://edstem.org/us/courses/97373/lessons/166043/)_
 _[Ed lesson](https://edstem.org/us/courses/97373/lessons/166044/)_
 
 ### Cheese Shop Demo App
+- **Description**: Deploy the shop locally and scale its workers by CPU usage or queue depth.
 - [Scaling with Kubernetes](https://github.com/dlops-io/cheese-shop-demo#tutorial-scaling-with-kubernetes)
 
 ### Cheese App v3: Vector DB, API & Frontend
+- **Description**: Run the app locally and test autoscaling and rolling updates.
 - [Kubernetes on your laptop](https://github.com/dlops-io/cheese-app-v3#tutorial-kubernetes-on-your-laptop)
 
 ---
