@@ -438,9 +438,6 @@ body { transition: background-color var(--dur-theme) var(--ease-in-out), color v
     transition:transform var(--dur-short) var(--ease-out), width var(--dur-short) var(--ease-out), height var(--dur-short) var(--ease-out);
   }
 }
-@media (max-width:760px) {
-  .page-index.section-nav { position:relative; }
-}
 .milestone-reading { padding:var(--space-xl) var(--space-2xl) var(--space-2xl); min-height:0; overflow:auto; overscroll-behavior:contain; scroll-padding-top:var(--space-lg); }
 .milestone-instruction-section + .milestone-instruction-section { margin-top:var(--space-2xl); padding-top:var(--space-xl); border-top:1px solid var(--color-rule); }
 .milestone-instruction-section h3 { font-size:24px; font-weight:450; line-height:1.3; margin:0 0 var(--space-lg); }
@@ -713,7 +710,7 @@ body { transition: background-color var(--dur-theme) var(--ease-in-out), color v
   .schedule-assessments:empty { display:none; }
   .schedule-footnote { flex-direction:column; align-items:flex-start; gap:var(--space-xs); }
   .document-layout { grid-template-columns:minmax(0,1fr); gap:var(--space-lg); padding-top:var(--space-lg); }
-  .page-index { position:static; flex-direction:row; overflow:auto; max-height:none; gap:var(--space-xs); padding-bottom:var(--space-sm); border-bottom:1px solid var(--color-rule); }
+  .page-index { position:relative; top:auto; flex-direction:row; overflow:auto; max-height:none; gap:var(--space-xs); padding-bottom:var(--space-sm); border-bottom:1px solid var(--color-rule); }
   .page-index > p { display:none; }
   .page-index a { flex:none; width:160px; padding:var(--space-xs) var(--space-sm); min-height:44px; font-size:13px; }
   .document-section h2 { font-size:var(--text-xl); }

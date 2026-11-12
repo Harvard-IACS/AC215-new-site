@@ -275,6 +275,12 @@ try {
         const menu = page.locator('.mobile-navigation'); await menu.locator('summary').click(); await menu.getByRole('link', { name: 'Home', exact: true }).click();
       } else await page.getByRole('navigation', { name: 'Course navigation', exact: true }).getByRole('link', { name: 'Home', exact: true }).click();
       await page.waitForURL(url => url.pathname === sitePath('/')); await page.locator('.scene-canvas canvas').waitFor();
+      if (width === 390) {
+        const index = page.getByRole('navigation', { name: 'Course information sections' });
+        const indexBottom = await index.evaluate(element => element.getBoundingClientRect().bottom);
+        const firstHeadingTop = await page.locator('#course-introduction').evaluate(element => element.getBoundingClientRect().top);
+        assert.ok(indexBottom <= firstHeadingTop, 'The mobile section menu overlaps the first course information heading');
+      }
       for (const [label, id] of [['Explore the course', 'curriculum'], ['Teaching staff', 'people']]) {
         await page.getByRole('link', { name: label, exact: true }).click(); const expected = width === 390 ? 64 + 24 : 88 + 40;
         await expect.poll(() => page.locator('#' + id).evaluate((element, expected) => Math.abs(element.getBoundingClientRect().top - expected), expected)).toBeLessThan(2);
