@@ -227,9 +227,11 @@ _[Ed lesson](https://edstem.org/us/courses/97373/lessons/166043/)_
 ## Lecture 19: Scaling: Kubernetes (local)
 _[Ed lesson](https://edstem.org/us/courses/97373/lessons/166044/)_
 
-### Scaling: Kubernetes (local)
+### Cheese Shop Demo App
+- [Scaling with Kubernetes](https://github.com/dlops-io/cheese-shop-demo#tutorial-scaling-with-kubernetes)
 
-**Tutorial for Scaling: Kubernetes (local) coming soon**
+### Cheese App v3: Vector DB, API & Frontend
+- [Kubernetes on your laptop](https://github.com/dlops-io/cheese-app-v3#tutorial-kubernetes-on-your-laptop)
 
 ---
 

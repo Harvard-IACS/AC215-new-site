@@ -67,7 +67,22 @@
       ],
       "new_path": "/tutorials.html",
       "output_sha256": "1959460cabd699626d13a80afc9af09294e27a37b3cab9f902475d9b5adec5b2",
-      "last_synced_on": "2026-11-06"
+      "last_synced_on": "2026-11-06",
+      "lecture_19_update": {
+        "verified_on": "2026-11-12",
+        "source": "https://edstem.org/us/courses/97373/lessons/166044/slides/1109339",
+        "change": "Replaced the local Kubernetes placeholder with the two public walkthroughs listed on the Ed Tutorials slide.",
+        "tutorials": [
+          {
+            "url": "https://github.com/dlops-io/cheese-shop-demo#tutorial-scaling-with-kubernetes",
+            "readme_blob": "ea1e498a536e931b2de012ff3ddfd015e5da7548"
+          },
+          {
+            "url": "https://github.com/dlops-io/cheese-app-v3#tutorial-kubernetes-on-your-laptop",
+            "readme_blob": "19864c574443392c9d19e77b89f06a123ee498a0"
+          }
+        ]
+      }
     },
     {
       "page": "faqs",
