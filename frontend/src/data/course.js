@@ -12,20 +12,20 @@ export const instructors = [
   { name: 'Chris Gumb', role: 'Instructor', image: '/staff/staff-1.jpeg', url: 'https://www.linkedin.com/in/chris-gumb-28856875/' },
 ];
 export const staff = [
-  { name: 'Rashmi Banthia', image: '/staff/staff-2.png', url: 'https://www.linkedin.com/in/rashmibanthia/' },
-  { name: 'Shivas Jayaram', image: '/staff/staff-3.png', url: 'https://www.linkedin.com/in/shivasj/' },
-  { name: 'Alyssa Mia Taliotis', image: '/staff/staff-4.jpg', url: 'https://www.linkedin.com/in/alyssa-mia-taliotis/' },
-  { name: 'Javier Machin', image: '/staff/staff-5.jpg', url: 'https://www.linkedin.com/in/jimachin/', website: { label: 'Besides Data', url: 'https://www.besidesdata.com/' } },
   { name: 'Raima Afra', image: '/staff/staff-6.jpeg', url: 'https://www.linkedin.com/in/raima-afra-310567206/' },
-  { name: 'Teodor Malchev', image: '/staff/staff-7.png', url: 'https://www.linkedin.com/in/teodor-malchev/' },
-  { name: 'Yasmine Morrison', image: '/staff/staff-8.png', url: 'https://www.linkedin.com/in/yasminemorrison/' },
-  { name: 'Yuan Tang', image: '/staff/staff-9.png', url: 'https://www.linkedin.com/in/hiyuantang/' },
-  { name: 'Peter Chen', image: '/staff/peter-chen.jpg', imagePosition: 'center 75%' },
   {
     name: 'Octavian Balatel',
     image: '/staff/octavian-balatel.jpg',
     imageCrop: { objectPosition: 'center', transform: 'scale(3.44)', transformOrigin: 'center 35%' },
   },
+  { name: 'Rashmi Banthia', image: '/staff/staff-2.png', url: 'https://www.linkedin.com/in/rashmibanthia/' },
+  { name: 'Peter Chen', image: '/staff/peter-chen.jpg', imagePosition: 'center 75%' },
+  { name: 'Shivas Jayaram', image: '/staff/staff-3.png', url: 'https://www.linkedin.com/in/shivasj/' },
+  { name: 'Javier Machin', image: '/staff/staff-5.jpg', url: 'https://www.linkedin.com/in/jimachin/', website: { label: 'Besides Data', url: 'https://www.besidesdata.com/' } },
+  { name: 'Teodor Malchev', image: '/staff/staff-7.png', url: 'https://www.linkedin.com/in/teodor-malchev/' },
+  { name: 'Yasmine Morrison', image: '/staff/staff-8.png', url: 'https://www.linkedin.com/in/yasminemorrison/' },
   { name: 'Patrick Ohiomoba', image: '/staff/patrick-ohiomoba.png', imagePosition: 'center top' },
+  { name: 'Alyssa Mia Taliotis', image: '/staff/staff-4.jpg', url: 'https://www.linkedin.com/in/alyssa-mia-taliotis/' },
+  { name: 'Yuan Tang', image: '/staff/staff-9.png', url: 'https://www.linkedin.com/in/hiyuantang/' },
 ];
 export const questions = ['What will I build in AC215?', 'What is due for milestone 3?', 'What are the prerequisites?'];
