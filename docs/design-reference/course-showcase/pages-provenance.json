@@ -109,7 +109,7 @@
         "Copied the published images locally under frontend/public/assets/projects. Verified every image against its upstream Git blob SHA."
       ],
       "new_path": "/showcase.html",
-      "output_sha256": "7044999c4292718ad7657bbbdd77bcdc62c1c05cf98b30cd3feeaa03d229b516"
+      "output_sha256": "74c40f2af70df6244414f068abf8f25dad2bbd060efb3767f9750fa44c7f2784"
     },
     {
       "page": "readings",
@@ -159,7 +159,7 @@
     "policy": "Original section text retained; H2/H3 policy sections are indexed as reading sections; Consent remains under the material-use policy. Grade table retains original values. Auditing checkmark source markers render as monochrome Lucide Check icons, replacing the list bullet; all original words and source Markdown remain unchanged.",
     "tutorials": "Original Lecture N headings and source body retained; Ed lesson link moves to each lecture header. Original Coming Soon entries retained.",
     "faqs": "Original questions and answers retained in native disclosures; source numbers appear beside each question; search does not alter content.",
-    "showcase": "The event date and hours appear above the student project grid. Images keep their full framing, and the poster-session illustration stays in the page header."
+    "showcase": "Project cards follow the event details directly. The poster-session illustration appears only when the project list is empty."
   },
   "last_verified_on": "2026-11-06",
   "home_information": {

@@ -658,22 +658,20 @@ body { transition: background-color var(--dur-theme) var(--ease-in-out), color v
 .page-empty { padding:var(--space-xl) 0 var(--space-2xl); }
 .page-empty h2 { font-size:var(--text-2xl); margin-bottom:var(--space-sm); }
 .page-empty p { color:var(--color-muted); margin-bottom:var(--space-lg); overflow-wrap:anywhere; }
-.showcase-intro { display:grid; grid-template-columns:minmax(0,3fr) minmax(0,2fr); align-items:center; gap:var(--space-xl); padding-block:var(--space-lg); }
+.showcase-intro { padding-block:var(--space-2xl) var(--space-xl); }
+.showcase-intro-empty { display:grid; grid-template-columns:minmax(0,3fr) minmax(0,2fr); align-items:center; gap:var(--space-xl); }
 .showcase-copy h1 { font-size:var(--text-display); line-height:1.08; }
 .showcase-event { display:flex; flex-wrap:wrap; column-gap:var(--space-lg); row-gap:var(--space-2xs); align-items:baseline; margin-top:var(--space-lg); font-size:var(--text-lg); }
 .showcase-event > span { color:var(--color-muted); }
+.showcase-empty-note { margin-top:var(--space-md); color:var(--color-muted); }
 .showcase-scene { position:relative; width:min(100%, 380px); justify-self:end; }
 .showcase-filter { position: absolute; }
 .showcase-scene img { display: block; width: 100%; height: auto; filter: url(#showcase-feather); }
-.showcase-projects { padding-top:var(--space-lg); border-top:1px solid var(--color-rule-2); }
-.showcase-projects-heading { display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; column-gap:var(--space-lg); row-gap:var(--space-xs); margin-bottom:var(--space-lg); }
-.showcase-projects-heading > h2 { font-size:var(--text-3xl); }
-.showcase-projects-heading > p { color:var(--color-muted); font-size:var(--text-sm); }
-.showcase-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 255px), 1fr)); gap:var(--space-lg); }
+.showcase-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 255px), 1fr)); gap:var(--space-lg); padding-top:var(--space-lg); border-top:1px solid var(--color-rule-2); }
 .showcase-project { min-width:0; background:var(--color-paper-2); border:1px solid var(--color-rule); border-radius:var(--radius-card); }
 .showcase-project > img { display:block; width:100%; aspect-ratio:16 / 9; object-fit:contain; background:#f5f6fa; border-start-start-radius:inherit; border-start-end-radius:inherit; }
 .showcase-project-copy { padding:var(--space-md); }
-.showcase-project h3 { max-width:none; font-size:var(--text-lg); line-height:1.3; margin-bottom:var(--space-xs); }
+.showcase-project h2 { max-width:none; font-size:var(--text-lg); line-height:1.3; margin-bottom:var(--space-xs); }
 .showcase-project .course-prose { font-size:var(--text-sm); line-height:1.65; }
 .showcase-project .course-prose > p { margin:0; }
 .course-page + .site-footer { border-top:1px solid var(--color-rule); }
@@ -740,11 +738,11 @@ body { transition: background-color var(--dur-theme) var(--ease-in-out), color v
   .faq-item summary h2 { font-size:17px; }
   .faq-item summary > svg { width:16px; height:16px; }
   .faq-answer { padding-left:36px; padding-right:0; }
-  .showcase-intro { grid-template-columns:minmax(0,1fr); gap:var(--space-md); }
+  .showcase-intro { padding-block:var(--space-lg); }
+  .showcase-intro-empty { grid-template-columns:minmax(0,1fr); gap:var(--space-md); }
   .showcase-copy h1 { font-size:clamp(42px,10vw,64px); }
   .showcase-event { margin-top:var(--space-sm); font-size:var(--text-md); }
   .showcase-scene { width:min(64%, 240px); justify-self:center; }
-  .showcase-projects-heading > h2 { font-size:var(--text-2xl); }
   .showcase-grid { gap:var(--space-md); }
 }
 @media (prefers-reduced-motion: reduce) {

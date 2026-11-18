@@ -168,43 +168,43 @@ function ReadingsPage() {
 }
 
 function ShowcasePage() {
+  const hasProjects = showcase.projects.length > 0;
   return (
     <div className="container page-content showcase-page">
-      <header className="showcase-intro">
+      <header className={hasProjects ? 'showcase-intro' : 'showcase-intro showcase-intro-empty'}>
         <div className="showcase-copy">
           <h1>Project showcase.</h1>
           <p className="showcase-event">
             <time dateTime={showcase.date}>{showcase.dateLabel}</time>
             <span>{showcase.hours}</span>
           </p>
+          {hasProjects ? null : <p className="showcase-empty-note">Projects coming soon.</p>}
         </div>
-        <div className="showcase-scene" aria-hidden="true">
-          <svg className="showcase-filter" width="0" height="0">
-            <filter id="showcase-feather" colorInterpolationFilters="sRGB">
-              <feGaussianBlur in="SourceAlpha" stdDeviation="7" result="softOutline" />
-              <feComposite in="SourceGraphic" in2="softOutline" operator="in" />
-            </filter>
-          </svg>
-          <img src={siteUrl('/showcase-poster-session.webp')} width="1402" height="1122" alt="" />
-        </div>
+        {hasProjects ? null : (
+          <div className="showcase-scene" aria-hidden="true">
+            <svg className="showcase-filter" width="0" height="0">
+              <filter id="showcase-feather" colorInterpolationFilters="sRGB">
+                <feGaussianBlur in="SourceAlpha" stdDeviation="7" result="softOutline" />
+                <feComposite in="SourceGraphic" in2="softOutline" operator="in" />
+              </filter>
+            </svg>
+            <img src={siteUrl('/showcase-poster-session.webp')} width="1402" height="1122" alt="" />
+          </div>
+        )}
       </header>
-      <section className="showcase-projects" aria-labelledby="student-projects">
-        <div className="showcase-projects-heading">
-          <h2 id="student-projects">Student projects</h2>
-          {showcase.moreProjectsComing ? <p>More projects coming soon.</p> : null}
-        </div>
+      {hasProjects ? (
         <div className="showcase-grid">
           {showcase.projects.map(project => (
             <article className="showcase-project" aria-labelledby={project.id} key={project.id}>
               <img src={siteUrl('/assets/projects/' + project.image)} alt="" loading="lazy" />
               <div className="showcase-project-copy">
-                <h3 id={project.id} tabIndex={-1}>{project.title}</h3>
+                <h2 id={project.id} tabIndex={-1}>{project.title}</h2>
                 <div className="course-prose"><CourseMarkdown>{project.description}</CourseMarkdown></div>
               </div>
             </article>
           ))}
         </div>
-      </section>
+      ) : null}
     </div>
   );
 }

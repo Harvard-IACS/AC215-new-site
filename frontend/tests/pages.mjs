@@ -215,7 +215,8 @@ try {
     await expect(page.locator('.showcase-event time')).toHaveAttribute('datetime', showcase.date);
     await expect(page.locator('.showcase-event')).toContainText(showcase.dateLabel);
     await expect(page.locator('.showcase-event')).toContainText(showcase.hours);
-    await expect.poll(() => page.locator('.showcase-scene img').evaluate(image => image.complete && image.naturalWidth > 0)).toBe(true);
+    await expect(page.locator('.showcase-scene')).toHaveCount(0);
+    await expect(page.getByRole('heading', { name: 'Student projects', exact: true })).toHaveCount(0);
     const cards = page.locator('.showcase-project');
     assert.deepEqual(await cards.getByRole('heading').allTextContents(), showcase.projects.map(project => project.title));
     await screenshot('showcase-desktop');
