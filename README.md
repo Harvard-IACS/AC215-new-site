@@ -84,7 +84,7 @@ Start with Option A. Complete it before moving to Option B with the same VM.
 
 ## How the app works
 
-The frontend uses **React, Vite, shadcn controls, and Three.js**. The build creates twelve complete readable pages, including supplementary readings and five full milestone instruction sets. The main navigation contains: Home, Schedule, Policy, Tutorials, FAQs, and Project Showcase. The showcase is marked Coming soon. On Home, an original solid architectural scene, based on SEC references, responds to scrolling and Light/Dark/System themes. The header pairs the Harvard shield with AC 215 and links to the separate pages.
+The frontend uses **React, Vite, shadcn controls, and Three.js**. The build creates thirteen readable pages, including supplementary readings and five full milestone instruction sets. The main navigation links to Home, Schedule, Milestones, Policy, Tutorials, FAQs, and Project Showcase. The showcase lists the event schedule and student projects. On Home, an original solid architectural scene, based on SEC references, responds to scrolling and Light/Dark/System themes. The header pairs the Harvard shield with AC 215 and links to the separate pages.
 
 The **Python 3.12 FastAPI backend** reads four public Markdown notes in `backend/knowledge/`: `general.md`, `lectures.md`, `milestones.md`, and `project.md`. `catalog.json` lists their titles, descriptions, and update date. These editable files are the course guide's knowledge. Gemini chooses relevant notes and streams an answer from them. All visitors share a $10 daily model budget.
 

@@ -1,0 +1,104 @@
+{
+  "date": "2026-12-14",
+  "dateLabel": "December 14, 2026",
+  "hours": "9:00 AM – 3:00 PM",
+  "moreProjectsComing": true,
+  "projects": [
+    {
+      "id": "project-all-weather-asset-allocation-platform",
+      "title": "All-Weather Asset Allocation Platform",
+      "image": "All-Weather-Asset-Allocation-Platform.jpg",
+      "description": "All-Weather Portfolio is an intelligent investment platform that automatically generates diversified portfolio allocations based on users' risk tolerance. It offers personalized strategies across asset classes that help users manage risk while pursuing long-term growth."
+    },
+    {
+      "id": "project-careergraph",
+      "title": "CareerGraph",
+      "image": "CareerGraph.png",
+      "description": "CareerGraph helps early-career candidates understand how well their resumes match real data and machine learning job openings. It checks each requirement against the resume and suggests whether to apply, reframe experience, or build missing skills."
+    },
+    {
+      "id": "project-crossed-out-not-lost",
+      "title": "Crossed Out, Not Lost",
+      "image": "Crossed-Out-Not-Lost.png",
+      "description": "Crossed Out, Not Lost uses document AI to detect crossed-out text in PDFs and scanned documents, making deletions visible and preserving them in structured text output."
+    },
+    {
+      "id": "project-dishmatcher",
+      "title": "DishMatcher",
+      "image": "DishMatcher.png",
+      "description": "Our app helps users to match the picture of a restaurant dish they wish to order with the correct corresponding menu text entry."
+    },
+    {
+      "id": "project-earthgrep",
+      "title": "Earthgrep",
+      "image": "Earthgrep.png",
+      "description": "Earthgrep is a search engine for the physical world. You type what you want to find, such as “golf courses in Massachusetts”, and Earthgrep searches Google’s AlphaEarth satellite embeddings and shows the matches on a map. Try it yourself on [app.earthgrep.com](https://app.earthgrep.com)."
+    },
+    {
+      "id": "project-furcast",
+      "title": "FurCast",
+      "image": "FurCast.png",
+      "description": "FurCast is a machine-learning platform that helps animal shelters spot animals at risk of long stays and get them adopted sooner. It predicts each animal’s chance of adoption in the next 30 days and flags slow-track animals on a daily dashboard."
+    },
+    {
+      "id": "project-glimpse",
+      "title": "Glimpse",
+      "image": "Glimpse.jpg",
+      "description": "Glimpse helps people find photos by describing what they remember, such as “sunset by the lake.” We combine fine-tuned vision-language models with a cloud-deployed search service to retrieve relevant images without manually tagging them."
+    },
+    {
+      "id": "project-hall-monitor",
+      "title": "Hall Monitor",
+      "image": "Hall-Monitor.jpg",
+      "description": "Hall Monitor scrapes hours-long city public meetings and makes them searchable. It shows an emotion analysis graph of when things get heated, summarizes the meeting, and as a companion for journalists, it present the top news stories that could come out of the meeting."
+    },
+    {
+      "id": "project-landmarkersai-nyc-landmarks-preservation-commission-ai-agent",
+      "title": "LandmarkersAI - NYC Landmarks Preservation Commission AI Agent",
+      "image": "LandmarkersAI-NYC-Landmarks-Preservation-Commission-AI-Agent.png",
+      "description": "Enter a New York City property address and describe your proposed work. The app estimates the landmark permit review pathway and shows relevant Landmarks Preservation Commission rules and similar past permits."
+    },
+    {
+      "id": "project-medical-assistant-project-map",
+      "title": "Medical Assistant Project (MAP)",
+      "image": "Medical-Assistant-Project-MAP.jpg",
+      "description": "MAP helps patients explore and understand their medical records in plain language. In our demo, users can browse synthetic health records and ask questions about lab results, medications, and health history, with answers that cite the source records."
+    },
+    {
+      "id": "project-pawguide",
+      "title": "PawGuide",
+      "image": "PawGuide.jpg",
+      "description": "PawGuide is an AI-powered dog health tracking application that analyzes stool images, records health observations, and provides evidence-based guidance through a veterinary knowledge RAG system."
+    },
+    {
+      "id": "project-poisson",
+      "title": "Poisson",
+      "image": "Poisson.png",
+      "description": "Poisson is an AI-enabled web app that helps recreational fishers know what they are allowed to do with the fish they catch. Upload a photo, and Poisson identifies the species, explains the local regulations that apply, and answers your questions with sources."
+    },
+    {
+      "id": "project-polyhistor",
+      "title": "PolyHistor",
+      "image": "PolyHistor.jpg",
+      "description": "PolyHistor is a web app that lets users explore 2D art across a rich shared embedding space. A text or image prompt produces a small “exhibit” of paintings from more than 104,000 artworks, with an interactive map of their thematic relationships."
+    },
+    {
+      "id": "project-rumi",
+      "title": "Rumi",
+      "image": "Rumi.jpg",
+      "description": "Rumi keeps academics up to date with new research and latest news. Every day, Rumi picks the papers and announcements related to your own research that matter most, explaining how such breakthroughs could be integrated in your work."
+    },
+    {
+      "id": "project-triage",
+      "title": "Triage",
+      "image": "Triage.png",
+      "description": "Triage helps trial coordinators quickly and accurately match breast cancer patients to eligible clinical trials. By explaining its reasoning for every eligibility criterion, Triage serves as a transparent screening aid that lets coordinators verify each match."
+    },
+    {
+      "id": "project-vantagex",
+      "title": "VantageX",
+      "image": "VantageX.png",
+      "description": "VantageX helps AI researchers write social posts that resonate with their community. It retrieves similar peer posts from Bluesky, drafts with Claude, and surfaces which emerging AI names are likely to keep gaining attention."
+    }
+  ]
+}

@@ -48,7 +48,7 @@ Use this table in your browser after the HTTP checks pass.
 | Home milestones | Each row opens its full instructions. The section index follows reading, and Close/Escape returns focus |
 | SEC scene | Resume enables the continuous route through the wall, atrium, and opening double doors. Pause remains selected after reload and page navigation |
 | Theme and accessibility settings | Light/Dark/System persists on the same site. Reduced motion, reduced transparency, and unavailable WebGL use their fallbacks |
-| Project Showcase | Coming soon and the poster-session illustration appear |
+| Project Showcase | The event date and time, student project descriptions, and images appear. The original project anchors and demo link work |
 
 Page effects depend on browser support and motion preferences. The six pages must remain readable and navigable when an effect is unavailable. [Browser page transitions](https://developer.chrome.com/docs/web-platform/view-transitions/cross-document).
 

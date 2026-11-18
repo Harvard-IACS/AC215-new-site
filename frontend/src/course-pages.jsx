@@ -8,6 +8,7 @@ import { Input } from '@/components/ui/input';
 import { LECTURES_URL } from './data/course';
 import manifest from './data/course-pages/pages.json';
 import schedule from './data/course-pages/schedule.json';
+import showcase from './data/course-pages/showcase.json';
 import policySource from './data/course-pages/policy.md?raw';
 import tutorialsSource from './data/course-pages/tutorials.md?raw';
 import faqSource from './data/course-pages/faqs.md?raw';
@@ -169,25 +170,41 @@ function ReadingsPage() {
 function ShowcasePage() {
   return (
     <div className="container page-content showcase-page">
-      <div className="showcase-copy">
-        <h1>Project<br />showcase.</h1>
-        <p>Coming soon.</p>
-        <a className="text-link" href={siteUrl('/milestones.html')}>Explore the milestones<ArrowUpRight aria-hidden="true" /></a>
-      </div>
-      <div className="showcase-scene">
-        <svg className="showcase-filter" width="0" height="0" aria-hidden="true">
-          <filter id="showcase-feather" colorInterpolationFilters="sRGB">
-            <feGaussianBlur in="SourceAlpha" stdDeviation="7" result="softOutline" />
-            <feComposite in="SourceGraphic" in2="softOutline" operator="in" />
-          </filter>
-        </svg>
-        <img
-          src={siteUrl('/showcase-poster-session.webp')}
-          width="1402"
-          height="1122"
-          alt="Illustration of students presenting projects on laptop-connected displays to small groups of visitors in an atrium."
-        />
-      </div>
+      <header className="showcase-intro">
+        <div className="showcase-copy">
+          <h1>Project showcase.</h1>
+          <p className="showcase-event">
+            <time dateTime={showcase.date}>{showcase.dateLabel}</time>
+            <span>{showcase.hours}</span>
+          </p>
+        </div>
+        <div className="showcase-scene" aria-hidden="true">
+          <svg className="showcase-filter" width="0" height="0">
+            <filter id="showcase-feather" colorInterpolationFilters="sRGB">
+              <feGaussianBlur in="SourceAlpha" stdDeviation="7" result="softOutline" />
+              <feComposite in="SourceGraphic" in2="softOutline" operator="in" />
+            </filter>
+          </svg>
+          <img src={siteUrl('/showcase-poster-session.webp')} width="1402" height="1122" alt="" />
+        </div>
+      </header>
+      <section className="showcase-projects" aria-labelledby="student-projects">
+        <div className="showcase-projects-heading">
+          <h2 id="student-projects">Student projects</h2>
+          {showcase.moreProjectsComing ? <p>More projects coming soon.</p> : null}
+        </div>
+        <div className="showcase-grid">
+          {showcase.projects.map(project => (
+            <article className="showcase-project" aria-labelledby={project.id} key={project.id}>
+              <img src={siteUrl('/assets/projects/' + project.image)} alt="" loading="lazy" />
+              <div className="showcase-project-copy">
+                <h3 id={project.id} tabIndex={-1}>{project.title}</h3>
+                <div className="course-prose"><CourseMarkdown>{project.description}</CourseMarkdown></div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }

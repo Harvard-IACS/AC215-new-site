@@ -98,14 +98,18 @@
     },
     {
       "page": "showcase",
-      "file": "frontend/src/data/course-pages/showcase.md",
-      "source": null,
-      "source_sha": null,
+      "file": "frontend/src/data/course-pages/showcase.json",
+      "source": "https://github.com/Harvard-IACS/2026-AC215/blob/main/ProjectShowcase.md",
+      "published_source": "https://harvard-iacs.github.io/2026-AC215/ProjectShowcase/",
+      "source_sha": "60a7bd704a7db10fc9e706e431bb20642ba84503",
+      "last_verified_on": "2026-11-18",
       "editorial_changes": [
-        "Added only the user-requested Coming soon placeholder; no event details invented"
+        "Imported the published date, hours, and 16 projects in source order. Retained each title, description, image, and heading anchor.",
+        "Converted the Earthgrep link to Markdown and rendered the projects in the course site’s visual style.",
+        "Copied the published images locally under frontend/public/assets/projects. Verified every image against its upstream Git blob SHA."
       ],
       "new_path": "/showcase.html",
-      "output_sha256": "563d9a5f9ba6d59ae680521096704c99045490b59273fa86592c0e54a732532b"
+      "output_sha256": "7044999c4292718ad7657bbbdd77bcdc62c1c05cf98b30cd3feeaa03d229b516"
     },
     {
       "page": "readings",
@@ -133,8 +137,7 @@
   "limitations": [
     "Schedule CSV cells last verified against the live published Sheet on 6 November 2026; future changes require a deliberate refresh. Source blank cells remain blank.",
     "Tutorial lecture 16 contains only its Ed lesson link; lecture 19 remains Coming Soon in the current source.",
-    "Tutorial inherited wording issues are retained and listed in audit_2026_11_06.",
-    "No date, time, location or registration information was added to the user-requested Showcase placeholder; the published schedule and policy still provide the tentative Dec 14 date."
+    "Tutorial inherited wording issues are retained and listed in audit_2026_11_06."
   ],
   "preservation": "Original visible wording and meaning retained apart from recorded publishing transformations; source SHAs identify exact fetched originals",
   "schedule_output_sha256": "96d3841c87624932d9e71cd7d85a7876b708082f762f8765eb4272a62d140881",
@@ -156,7 +159,7 @@
     "policy": "Original section text retained; H2/H3 policy sections are indexed as reading sections; Consent remains under the material-use policy. Grade table retains original values. Auditing checkmark source markers render as monochrome Lucide Check icons, replacing the list bullet; all original words and source Markdown remain unchanged.",
     "tutorials": "Original Lecture N headings and source body retained; Ed lesson link moves to each lecture header. Original Coming Soon entries retained.",
     "faqs": "Original questions and answers retained in native disclosures; source numbers appear beside each question; search does not alter content.",
-    "showcase": "Only requested Coming soon state; existing classroom poster used as illustration, with no project/date claims."
+    "showcase": "The event date and hours appear above the student project grid. Images keep their full framing, and the poster-session illustration stays in the page header."
   },
   "last_verified_on": "2026-11-06",
   "home_information": {

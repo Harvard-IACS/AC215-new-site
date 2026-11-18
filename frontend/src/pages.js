@@ -11,7 +11,7 @@ export const pages = [
   { id: 'policy', aliases: ['/policy/'], path: '/policy.html', label: 'Policy', title: 'Course policy | AC215', description: 'AC215 grading, deadlines, collaboration, academic honesty, accessibility, and course policies.' },
   { id: 'tutorials', aliases: ['/tutorials_demo/'], path: '/tutorials.html', label: 'Tutorials', title: 'Tutorials | AC215', description: 'AC215 tutorials and demos, organized by lecture, with notebooks, repositories, and Ed lessons.' },
   { id: 'faqs', aliases: ['/faq/'], path: '/faqs.html', label: 'FAQs', title: 'FAQs | AC215', description: 'Answers to AC215 questions about lectures, quizzes, projects, teams, and course requirements.' },
-  { id: 'showcase', aliases: ['/ProjectShowcase/'], path: '/showcase.html', label: 'Project showcase', title: 'Project showcase | AC215', description: 'The AC215 project showcase. Coming soon.' },
+  { id: 'showcase', aliases: ['/ProjectShowcase/'], path: '/showcase.html', label: 'Project showcase', title: 'Project showcase | AC215', description: 'Browse AC215 student projects and find the Project Showcase date and time.' },
 ];
 
 export const resourcePages = [

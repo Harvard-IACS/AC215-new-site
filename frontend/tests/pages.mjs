@@ -16,6 +16,7 @@ const specs = [
   { path: '/milestones.html', label: 'Milestones', title: 'Milestones | AC215', heading: /^Milestones\.$/ },
 ];
 const schedule = JSON.parse(await readFile(new URL('../src/data/course-pages/schedule.json', import.meta.url), 'utf8'));
+const showcase = JSON.parse(await readFile(new URL('../src/data/course-pages/showcase.json', import.meta.url), 'utf8'));
 const tutorialCount = (await readFile(new URL('../src/data/course-pages/tutorials.md', import.meta.url), 'utf8')).match(/^## Lecture \d+:/gm).length;
 const faqCount = (await readFile(new URL('../src/data/course-pages/faqs.md', import.meta.url), 'utf8')).match(/^### \d+\./gm).length;
 const report = { passed: [], failures: [], pageErrors: [], consoleErrors: [], consoleWarnings: [], missingAssets: [], failedRequests: [], apiRequests: [], navigationTransitions: [], evidence: [] };
@@ -196,7 +197,7 @@ try {
     await page.getByRole('button', { name: 'Clear search', exact: true }).click(); await expect(page.getByLabel('Search questions')).toHaveValue(''); await expect(page.locator('.faq-item')).toHaveCount(faqCount);
     await screenshot('faqs-desktop');
   });
-  await check('Policy scroll highlight, anchors and grade table; Showcase coming-soon state', async () => {
+  await check('Policy scroll highlight, anchors and grade table', async () => {
     await go(specs[1]); const index = page.getByRole('navigation', { name: 'On this page', exact: true });
     await page.locator('#late-policy').evaluate(heading => heading.scrollIntoView({ behavior: 'instant' }));
     await expect(index.locator('a[aria-current="location"]')).toHaveAttribute('href', '#late-policy');
@@ -208,9 +209,24 @@ try {
     const weights = await page.locator('.course-prose table tbody tr').evaluateAll(rows => rows.map(row => parseFloat(row.lastElementChild.textContent)));
     assert.deepEqual(weights, [8, 14, 18, 18, 24, 18]); assert.equal(weights.reduce((sum, value) => sum + value, 0), 100);
     await page.reload(); await expect(page.locator('#policy-on-usage-of-publicly-available-class-material')).toBeInViewport();
-    await go(specs[4]); await expect(page.getByText('Coming soon.', { exact: true })).toBeVisible();
+  });
+  await check('Showcase event details, project images and original project links', async () => {
+    await go(specs[4]);
+    await expect(page.locator('.showcase-event time')).toHaveAttribute('datetime', showcase.date);
+    await expect(page.locator('.showcase-event')).toContainText(showcase.dateLabel);
+    await expect(page.locator('.showcase-event')).toContainText(showcase.hours);
     await expect.poll(() => page.locator('.showcase-scene img').evaluate(image => image.complete && image.naturalWidth > 0)).toBe(true);
+    const cards = page.locator('.showcase-project');
+    assert.deepEqual(await cards.getByRole('heading').allTextContents(), showcase.projects.map(project => project.title));
     await screenshot('showcase-desktop');
+    for (const image of await cards.locator('img').all()) {
+      await image.scrollIntoViewIfNeeded();
+      await expect.poll(() => image.evaluate(element => element.complete && element.naturalWidth > 0)).toBe(true);
+    }
+    const legacyLink = base + '/ProjectShowcase/#project-earthgrep';
+    assert.equal((await page.goto(legacyLink)).status(), 200);
+    await expect(page.getByRole('heading', { name: 'Earthgrep', exact: true })).toBeInViewport();
+    await expect(page.getByRole('link', { name: 'app.earthgrep.com', exact: true })).toHaveAttribute('href', 'https://app.earthgrep.com');
   });
   if (chatEnabled) await check('Chat opens on two pages, previews real local course notes and retains only in-page drafts', async () => {
     const response = await context.request.get(base + '/api/course'); assert.equal(response.status(), 200); assert.equal((await response.json()).answer_mode, 'sources', 'Paid model mode is outside this test');
