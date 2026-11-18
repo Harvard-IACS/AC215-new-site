@@ -298,7 +298,7 @@ try {
         const firstHeadingTop = await page.locator('#course-introduction').evaluate(element => element.getBoundingClientRect().top);
         assert.ok(indexBottom <= firstHeadingTop, 'The mobile section menu overlaps the first course information heading');
       }
-      for (const [label, id] of [['Explore the course', 'curriculum'], ['Teaching staff', 'people']]) {
+      for (const [label, id] of [['View course topics', 'curriculum'], ['Teaching staff', 'people']]) {
         await page.getByRole('link', { name: label, exact: true }).click(); const expected = width === 390 ? 64 + 24 : 88 + 40;
         await expect.poll(() => page.locator('#' + id).evaluate((element, expected) => Math.abs(element.getBoundingClientRect().top - expected), expected)).toBeLessThan(2);
       }

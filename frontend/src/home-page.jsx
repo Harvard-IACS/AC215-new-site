@@ -38,7 +38,7 @@ export default function HomePage({ openGuide }) {
               <p className="lead">Build, deploy, and operate complete AI systems.</p>
               <p className="enrollment-notice">Enrollment is closed - the class has reached capacity.</p>
               <div className="hero-actions">
-                <a className="button primary" href="#curriculum">Explore the course <ArrowDownRight aria-hidden="true" /></a>
+                <a className="button primary" href="#curriculum">View course topics <ArrowDownRight aria-hidden="true" /></a>
                 {openGuide ? <button className="button secondary" type="button" onClick={() => openGuide()}>Ask AC215 <MessageCircle aria-hidden="true" /></button> : null}
               </div>
               <a className="text-link" href="https://canvas.harvard.edu/courses/170012" target="_blank" rel="noreferrer">Watch Prof. Pavlos Protopapas’s introductory video <ExternalLink aria-hidden="true" /></a>
@@ -47,7 +47,7 @@ export default function HomePage({ openGuide }) {
             <p className="hero-course-name">MLOps &amp; LLMOps<br /><span className="muted">Production AI Systems</span></p>
           </section>
           <section className="course-chapter" aria-labelledby="curriculum">
-            <h2 id="curriculum">The model is<br />the beginning.</h2>
+            <h2 id="curriculum">Course topics</h2>
             <p className="chapter-lead">An experiment becomes an application people can use.</p>
             <dl className="topic-list">
               <div><dt>Learn the models</dt><dd>LLMs, retrieval, fine-tuning, and evaluation.</dd></div>
@@ -57,13 +57,13 @@ export default function HomePage({ openGuide }) {
             <a className="text-link" href={LECTURES_URL} target="_blank" rel="noreferrer">Open lecture content <ExternalLink aria-hidden="true" /></a>
           </section>
           <section className="course-chapter project-chapter" aria-labelledby="project-heading">
-            <h2 id="project-heading">One team.<br />A complete system.</h2>
+            <h2 id="project-heading">Semester project</h2>
             <p className="chapter-lead">Build your own AI application from problem to production.</p>
             <p>Teams of 3 to 5 connect modeling, data, infrastructure, and a usable interface. Every member learns the whole system.</p>
             <a className="text-link" href={siteUrl('/milestones.html')}>See the project milestones <ArrowUpRight aria-hidden="true" /></a>
           </section>
           <section className="course-chapter classroom-chapter" aria-labelledby="classroom">
-            <h2 id="classroom">Take your seat.</h2>
+            <h2 id="classroom">Class time and location</h2>
             <p className="chapter-lead">SEC 1.321.<br />Tuesday and Thursday, 12:45 to 2:45 pm.</p>
             <p>Extension students join by Zoom.</p>
             <div className="course-resources"><a className="text-link" href={LECTURES_URL} target="_blank" rel="noreferrer">Lectures on Ed <ExternalLink aria-hidden="true" /></a><a className="text-link" href={DISCUSSION_URL} target="_blank" rel="noreferrer">Class discussion <ExternalLink aria-hidden="true" /></a></div>
@@ -77,7 +77,7 @@ export default function HomePage({ openGuide }) {
       </div>
       <CourseInformation />
       <section className="people-section container" aria-labelledby="people">
-        <div className="section-intro"><h2 id="people">Learn with<br />Pavlos and Chris.</h2><a className="text-link" href={DISCUSSION_URL} target="_blank" rel="noreferrer">Connect with the teaching team <ExternalLink aria-hidden="true" /></a></div>
+        <div className="section-intro"><h2 id="people">Teaching staff</h2><a className="text-link" href={DISCUSSION_URL} target="_blank" rel="noreferrer">Connect with the teaching team <ExternalLink aria-hidden="true" /></a></div>
         <div className="people-layout"><div className="instructor-list">{instructors.map(person => <Person key={person.name} person={person} instructor />)}</div><div className="staff-list">{staff.map(person => <Person key={person.name} person={person} />)}</div></div>
       </section>
       {openGuide ? <section className="ask-section container" id="ask" aria-labelledby="ask-heading">

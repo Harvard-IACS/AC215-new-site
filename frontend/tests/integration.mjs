@@ -398,7 +398,7 @@ try {
   record('Desktop course identity, fonts and reference-based architectural WebGL scene');
   const canvas = page.locator('.scene-canvas canvas');
   const before = imageHash(await canvas.screenshot());
-  await page.getByRole('link', { name: 'Explore the course', exact: true }).click();
+  await page.getByRole('link', { name: 'View course topics', exact: true }).click();
   assert.equal(await page.locator('#curriculum').evaluate(element=>element.tagName),'H2');
   await expect.poll(() => page.locator('#curriculum').evaluate(element => Math.abs(element.getBoundingClientRect().top-128))).toBeLessThan(2);
   await expect.poll(async () => imageHash(await canvas.screenshot())).not.toBe(before);
@@ -683,7 +683,7 @@ try {
     }
     if (width === 390 || width === 1280) {
       const expectedTop = width === 390 ? 64 + 24 : 88 + 40;
-      for (const [label,id] of [['Explore the course','curriculum'],['Teaching staff','people']]) {
+      for (const [label,id] of [['View course topics','curriculum'],['Teaching staff','people']]) {
         await page.getByRole('link',{name:label,exact:true}).click();
         const heading = page.locator('#'+id);
         assert.equal(await heading.evaluate(element=>element.tagName),'H2',`${id} fragment does not target the actual heading`);
