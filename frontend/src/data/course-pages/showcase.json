@@ -4,10 +4,52 @@
   "hours": "9:00 AM – 3:00 PM",
   "projects": [
     {
+      "id": "project-aesop",
+      "title": "Aesop",
+      "image": "Aesop.png",
+      "description": "Aesop lets language learners read any book at their level. It rewrites each chapter to fit the reader without changing the story, updates their level as they read, and works in multiple languages."
+    },
+    {
+      "id": "project-agentic-interlocking-brick-building",
+      "title": "Agentic Interlocking Brick Building",
+      "image": "Agentic-Interlocking-Brick-Building.png",
+      "description": "Our product generates buildable LEGO models of real buildings: an LLM agent writes a building program, and our compiler turns it into a validated model made of real parts. The web app lets you watch it go together step by step in 3D and download the parts list."
+    },
+    {
       "id": "project-all-weather-asset-allocation-platform",
       "title": "All-Weather Asset Allocation Platform",
       "image": "All-Weather-Asset-Allocation-Platform.jpg",
       "description": "All-Weather Portfolio is an intelligent investment platform that automatically generates diversified portfolio allocations based on users' risk tolerance. It offers personalized strategies across asset classes that help users manage risk while pursuing long-term growth."
+    },
+    {
+      "id": "project-arctrac",
+      "title": "ArcTrac",
+      "image": "ArcTrac.png",
+      "description": "ArcTrac is a tele-rehab tool for shoulder patients. Patients record prescribed exercises, computer vision measures range of motion, and an LLM agent explains recovery progress against the care plan, alerting the physical therapist when clinical thresholds are crossed."
+    },
+    {
+      "id": "project-atlas",
+      "title": "ATLAS",
+      "image": "ATLAS.jpg",
+      "description": "We find where your system breaks. ATLAS is an agentic load-testing platform. Users describe a test in plain English; LLM-powered agents turn it into a plan, provision load generators on GKE, run it against the target, and explain the results."
+    },
+    {
+      "id": "project-betterpaws",
+      "title": "BetterPaws",
+      "image": "BetterPaws.png",
+      "description": "Caring for a pet with a chronic condition shouldn't feel overwhelming. BetterPaws brings caregivers together with an AI-powered companion that turns everyday observations into meaningful health insights, simplifies veterinary visits, and makes better care a team effort."
+    },
+    {
+      "id": "project-beyond-the-eta-a-reliability-aware-campus-travel-agent",
+      "title": "Beyond the ETA: A Reliability-Aware Campus Travel Agent",
+      "image": "Beyond-the-ETA-A-Reliability-Aware-Campus-Travel-Agent.png",
+      "description": "Bus schedules say when a bus should come. Beyond the ETA predicts when it actually will. Trained on a year of real MBTA arrivals, it gives Cambridge riders an arrival time with an honest 80% range, through a chat assistant that recommends routes and flags construction."
+    },
+    {
+      "id": "project-cancerout",
+      "title": "CancerOut",
+      "image": "CancerOut.jpg",
+      "description": "We developed an AI-powered tool that analyzes lung histopathology slides to detect potential cancer and classify its type. The system flags uncertain predictions and generates visual heatmaps to support pathologists in their review and clinical decision-making."
     },
     {
       "id": "project-careergraph",
@@ -16,22 +58,64 @@
       "description": "CareerGraph helps early-career candidates understand how well their resumes match real data and machine learning job openings. It checks each requirement against the resume and suggests whether to apply, reframe experience, or build missing skills."
     },
     {
+      "id": "project-careonex",
+      "title": "CareOneX",
+      "image": "CareOneX.png",
+      "description": "Home care Voice Agents"
+    },
+    {
+      "id": "project-claim-ledger",
+      "title": "Claim Ledger",
+      "image": "Claim-Ledger.png",
+      "description": "Claim Ledger extracts forward-looking claims from SEC filings and checks them against later disclosures. It estimates the odds that open claims will be fulfilled and compares each company's track record with its peers, with links to the evidence."
+    },
+    {
       "id": "project-crossed-out-not-lost",
       "title": "Crossed Out, Not Lost",
-      "image": "Crossed-Out-Not-Lost.png",
+      "image": "Crossed-Out-Not-Lost.jpg",
       "description": "Crossed Out, Not Lost uses document AI to detect crossed-out text in PDFs and scanned documents, making deletions visible and preserving them in structured text output."
+    },
+    {
+      "id": "project-cycleur",
+      "title": "Cycleur",
+      "image": "Cycleur.jpg",
+      "description": "Cycleur finds the best bike route for the views you want. Tell it “shady, by the water, past historic buildings,” and it scores every block from aerial imagery alone, predicting how each street feels to a rider, then plans the route that suits you best."
     },
     {
       "id": "project-dishmatcher",
       "title": "DishMatcher",
-      "image": "DishMatcher.png",
-      "description": "Our app helps users to match the picture of a restaurant dish they wish to order with the correct corresponding menu text entry."
+      "image": "DishMatcher.jpg",
+      "description": "Dish Match helps diners identify dishes by matching a food photo to a restaurant’s menu. Upload a dish photo and a menu photo, and the app reads the menu and suggests the most likely matches."
+    },
+    {
+      "id": "project-docent",
+      "title": "Docent",
+      "image": "Docent.png",
+      "description": "Students waste hours rereading what they already know. Docent, a personal tutor for any course, tracks each student’s mastery all semester, spots the gaps, and points them to the exact slide or lecture moment, with practice problems grounded in how the class was taught."
     },
     {
       "id": "project-earthgrep",
       "title": "Earthgrep",
       "image": "Earthgrep.png",
       "description": "Earthgrep is a search engine for the physical world. You type what you want to find, such as “golf courses in Massachusetts”, and Earthgrep searches Google’s AlphaEarth satellite embeddings and shows the matches on a map. Try it yourself on [app.earthgrep.com](https://app.earthgrep.com)."
+    },
+    {
+      "id": "project-edutranscribe",
+      "title": "EduTranscribe",
+      "image": "EduTranscribe.jpg",
+      "description": "Little hands, big ideas, messy handwriting! EduTranscribe uses AI to turn young students’ handwritten stories into digital text, flagging tricky words for teacher review so students are assessed on their writing, not their handwriting. Let every idea shine!"
+    },
+    {
+      "id": "project-everfit-ai",
+      "title": "EverFit AI",
+      "image": "EverFit-AI.jpg",
+      "description": "An agentic AI platform that monitors ML models, detects drift, and diagnoses performance issues. It recommends fixes and automates retraining to keep models accurate and reliable."
+    },
+    {
+      "id": "project-fomosavior",
+      "title": "FOMOsavior",
+      "image": "FOMOsavior.png",
+      "description": "FOMOsavior frees developers from the worry of missing what’s actually trending in open source. Ask in plain language, like “Which agentic RL projects are gaining momentum?”, and get a short answer from fresh GitHub and Hacker News data, with the numbers and sources."
     },
     {
       "id": "project-furcast",
@@ -50,6 +134,24 @@
       "title": "Hall Monitor",
       "image": "Hall-Monitor.jpg",
       "description": "Hall Monitor scrapes hours-long city public meetings and makes them searchable. It shows an emotion analysis graph of when things get heated, summarizes the meeting, and as a companion for journalists, it present the top news stories that could come out of the meeting."
+    },
+    {
+      "id": "project-healthops",
+      "title": "HealthOps",
+      "image": "HealthOps.png",
+      "description": "HealthOps is a trust layer for multi-wearable users. It brings Apple Watch and Fitbit data into one store, reconciles disagreeing readings, and lets a verified LLM explain which device to trust and why."
+    },
+    {
+      "id": "project-heimdall",
+      "title": "Heimdall",
+      "image": "Heimdall.png",
+      "description": "Heimdall delivers atmospheric intelligence for operations that rely on the weather, serving 3D cloud structure anywhere in the Western Hemisphere, now and an hour ahead. It gives pilots, solar operators, and search teams the time and information to act as conditions change."
+    },
+    {
+      "id": "project-islandfeature",
+      "title": "IslandFeature",
+      "image": "IslandFeature.jpg",
+      "description": "IslandFeature is an AI-assisted feature engineering workbench that helps data scientists explore data, generate and review feature ideas, and evaluate candidate features on a development dataset."
     },
     {
       "id": "project-landmarkersai-nyc-landmarks-preservation-commission-ai-agent",
@@ -82,10 +184,46 @@
       "description": "PolyHistor is a web app that lets users explore 2D art across a rich shared embedding space. A text or image prompt produces a small “exhibit” of paintings from more than 104,000 artworks, with an interactive map of their thematic relationships."
     },
     {
+      "id": "project-refundlens",
+      "title": "RefundLens",
+      "image": "RefundLens.jpg",
+      "description": "RefundLens helps online merchants detect AI-manipulated damage photos in refund claims. Combining computer vision and multimodal AI, it delivers cost-efficient fraud risk assessments and actionable recommendations to support smarter refund decisions."
+    },
+    {
+      "id": "project-reminisce",
+      "title": "Reminisce",
+      "image": "Reminisce.jpg",
+      "description": "Reminisce helps people with early-onset Alzheimer's hold on to meaningful memories. It turns family photos and stories into a searchable and verified memory graph, then utilizes a recall prediction model to guide recall sessions that elongate the memory decline process."
+    },
+    {
+      "id": "project-researchpulse",
+      "title": "ResearchPulse",
+      "image": "ResearchPulse.png",
+      "description": "ResearchPulse helps you spot the next big idea in AI/ML before everyone else does. Every day it scans what researchers and developers are posting, reading and discussing, and points out the topics that are small today but about to grow."
+    },
+    {
+      "id": "project-roamwise-your-ai-powered-travel-companion",
+      "title": "RoamWise - Your AI-Powered Travel Companion",
+      "image": "RoamWise-Your-AI-Powered-Travel-Companion.jpg",
+      "description": "RoamWise transforms your travel interests—whether history, museums, food, or nature—into personalized adventures across Greater Boston. Share your preferences, pick your favorite AI-ranked spots, and RoamWise turns them into a customized itinerary."
+    },
+    {
       "id": "project-rumi",
       "title": "Rumi",
       "image": "Rumi.jpg",
       "description": "Rumi keeps academics up to date with new research and latest news. Every day, Rumi picks the papers and announcements related to your own research that matter most, explaining how such breakthroughs could be integrated in your work."
+    },
+    {
+      "id": "project-scriptcue",
+      "title": "ScriptCue",
+      "image": "ScriptCue.png",
+      "description": "ScriptCue helps marketers and creators turn a campaign brief into a ready-to-shoot short-form video script, tailored to their audience, tone and engagement goal using real TikTok data."
+    },
+    {
+      "id": "project-tastebridge",
+      "title": "TasteBridge",
+      "image": "TasteBridge.png",
+      "description": "TasteBridge helps two readers with different tastes agree on a book: each picks five favorites, and it recommends five \"bridge books\" with a reason for each reader, plus a \"taste galaxy\" map showing why their tastes overlap. Built on Goodreads data with full MLOps."
     },
     {
       "id": "project-triage",
@@ -94,10 +232,39 @@
       "description": "Triage helps trial coordinators quickly and accurately match breast cancer patients to eligible clinical trials. By explaining its reasoning for every eligibility criterion, Triage serves as a transparent screening aid that lets coordinators verify each match."
     },
     {
+      "id": "project-undersigned",
+      "title": "Undersigned",
+      "image": "Undersigned.jpg",
+      "description": "Before a new federal regulation becomes law, the government has to answer the public, but nothing says the answer has to be easy to find. Undersigned finds it, mapping what people asked for, how the agency replied, and whose voices actually changed the law."
+    },
+    {
       "id": "project-vantagex",
       "title": "VantageX",
       "image": "VantageX.png",
       "description": "VantageX helps AI researchers write social posts that resonate with their community. It retrieves similar peer posts from Bluesky, drafts with Claude, and surfaces which emerging AI names are likely to keep gaining attention."
+    },
+    {
+      "id": "project-yardbird",
+      "title": "YardBird",
+      "image": "YardBird.png",
+      "description": "Yardbird is an event-discovery app. We built a self-expanding, self-healing web crawler to find events, and an addictive swiping interface that learns each user's taste."
     }
+  ],
+  "additionalProjects": [
+    "Accelerate the Accelerators",
+    "AeroID Tool-Augmented Aircraft Identification: Making a Low-Cost LLM Expert-Accurate with ViT",
+    "An AI Co-Agent and Knowledge Base for Sustainable Apparel Sourcing",
+    "Bridgewatch API/SDK Migration and Dependency Repair",
+    "Can Software Stop an LLM Agent From P-Hacking? Multi-Agent Orchestration with Enforced Process for Alpha Discovery",
+    "F1 WhyLap: who's winning, and why, every lap",
+    "Fixture: A Scheduling Assistant You Can Trust to Run on Its Own",
+    "[G/M]aze tracking",
+    "InspectBeforeBuy",
+    "InterviewLens: A Multimodal AI Coach for Behavioral Interview Practice",
+    "Knowing When to Trust the Merge: Confidence-Aware Reconciliation of Conflicting Company Records",
+    "Paper2Baseline: From ML Papers to Tested Baselines with AI Agents",
+    "SurveyScout: A Coverage-Tracked Literature-Review Harness",
+    "VetChamp",
+    "Waypoint: A Verified, Adaptive Course-and-Mentor Roadmap for Harvard Data Science Master's Students"
   ]
 }

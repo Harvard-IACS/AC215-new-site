@@ -99,17 +99,19 @@
     {
       "page": "showcase",
       "file": "frontend/src/data/course-pages/showcase.json",
-      "source": "https://github.com/Harvard-IACS/2026-AC215/blob/main/ProjectShowcase.md",
+      "source": "https://github.com/Harvard-IACS/2026-AC215/blob/49a8002c7b5bfe259af04ee2d777bba356bff223/ProjectShowcase.md",
       "published_source": "https://harvard-iacs.github.io/2026-AC215/ProjectShowcase/",
-      "source_sha": "60a7bd704a7db10fc9e706e431bb20642ba84503",
-      "last_verified_on": "2026-11-18",
+      "source_sha": "a2f3e808d97646c0db0056d7c75c2439ae7da007",
+      "published_html_sha256": "f7a90b921b711409cf99c4ac5a913b06537bbb92dab8ae88adb04719bb537026",
+      "last_verified_on": "2026-11-20",
+      "download_location_on_test_vps": "~/internet-downloads/ac215-2026-project-showcase/2026-11-20-49a8002/",
       "editorial_changes": [
-        "Imported the published date, hours, and 16 projects in source order. Retained each title, description, image, and heading anchor.",
-        "Converted the Earthgrep link to Markdown and rendered the projects in the course site’s visual style.",
-        "Copied the published images locally under frontend/public/assets/projects. Verified every image against its upstream Git blob SHA."
+        "Synced the published event details, 41 project cards, and 15 additional presentation titles. Checked the wording and order against the live page and source.",
+        "Preserved the project anchors, additional list anchor, and Earthgrep demo link. Displayed the additional list under the shorter heading Also presenting.",
+        "Verified all 41 published images against their upstream Git blob SHAs. Copied the original bytes for 25 new cards and the two revised images for Crossed Out, Not Lost and DishMatcher."
       ],
       "new_path": "/showcase.html",
-      "output_sha256": "74c40f2af70df6244414f068abf8f25dad2bbd060efb3767f9750fa44c7f2784"
+      "output_sha256": "f0e898c06a33406df8af0391a9c57d565f238594003e9d9e0757eedb64fbceeb"
     },
     {
       "page": "readings",
@@ -159,7 +161,7 @@
     "policy": "Original section text retained; H2/H3 policy sections are indexed as reading sections; Consent remains under the material-use policy. Grade table retains original values. Auditing checkmark source markers render as monochrome Lucide Check icons, replacing the list bullet; all original words and source Markdown remain unchanged.",
     "tutorials": "Original Lecture N headings and source body retained; Ed lesson link moves to each lecture header. Original Coming Soon entries retained.",
     "faqs": "Original questions and answers retained in native disclosures; source numbers appear beside each question; search does not alter content.",
-    "showcase": "Project cards follow the event details directly. The poster-session illustration appears only when the project list is empty."
+    "showcase": "Project cards follow the event details directly. The additional presentation titles follow the cards. The poster-session illustration appears only when both lists are empty."
   },
   "last_verified_on": "2026-11-06",
   "home_information": {

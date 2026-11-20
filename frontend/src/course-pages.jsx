@@ -168,7 +168,8 @@ function ReadingsPage() {
 }
 
 function ShowcasePage() {
-  const hasProjects = showcase.projects.length > 0;
+  const { projects, additionalProjects = [] } = showcase;
+  const hasProjects = projects.length > 0 || additionalProjects.length > 0;
   return (
     <div className="container page-content showcase-page">
       <header className={hasProjects ? 'showcase-intro' : 'showcase-intro showcase-intro-empty'}>
@@ -192,9 +193,9 @@ function ShowcasePage() {
           </div>
         )}
       </header>
-      {hasProjects ? (
+      {projects.length > 0 ? (
         <div className="showcase-grid">
-          {showcase.projects.map(project => (
+          {projects.map(project => (
             <article className="showcase-project" aria-labelledby={project.id} key={project.id}>
               <img src={siteUrl('/assets/projects/' + project.image)} alt="" loading="lazy" />
               <div className="showcase-project-copy">
@@ -204,6 +205,16 @@ function ShowcasePage() {
             </article>
           ))}
         </div>
+      ) : null}
+      {additionalProjects.length > 0 ? (
+        <section className="document-section showcase-additional-projects" aria-labelledby="also-presenting-on-december-14">
+          <h2 id="also-presenting-on-december-14" tabIndex={-1}>Also presenting</h2>
+          <div className="course-prose">
+            <ul>
+              {additionalProjects.map(title => <li key={title}>{title}</li>)}
+            </ul>
+          </div>
+        </section>
       ) : null}
     </div>
   );

@@ -210,7 +210,7 @@ try {
     assert.deepEqual(weights, [8, 14, 18, 18, 24, 18]); assert.equal(weights.reduce((sum, value) => sum + value, 0), 100);
     await page.reload(); await expect(page.locator('#policy-on-usage-of-publicly-available-class-material')).toBeInViewport();
   });
-  await check('Showcase event details, project images and original project links', async () => {
+  await check('Showcase event details, project cards, additional presenters and original project links', async () => {
     await go(specs[4]);
     await expect(page.locator('.showcase-event time')).toHaveAttribute('datetime', showcase.date);
     await expect(page.locator('.showcase-event')).toContainText(showcase.dateLabel);
@@ -219,6 +219,8 @@ try {
     await expect(page.getByRole('heading', { name: 'Student projects', exact: true })).toHaveCount(0);
     const cards = page.locator('.showcase-project');
     assert.deepEqual(await cards.getByRole('heading').allTextContents(), showcase.projects.map(project => project.title));
+    const additionalProjects = page.getByRole('region', { name: 'Also presenting', exact: true });
+    assert.deepEqual(await additionalProjects.getByRole('listitem').allTextContents(), showcase.additionalProjects);
     await screenshot('showcase-desktop');
     for (const image of await cards.locator('img').all()) {
       await image.scrollIntoViewIfNeeded();
@@ -228,6 +230,8 @@ try {
     assert.equal((await page.goto(legacyLink)).status(), 200);
     await expect(page.getByRole('heading', { name: 'Earthgrep', exact: true })).toBeInViewport();
     await expect(page.getByRole('link', { name: 'app.earthgrep.com', exact: true })).toHaveAttribute('href', 'https://app.earthgrep.com');
+    await page.goto(base + '/ProjectShowcase/#also-presenting-on-december-14');
+    await expect(additionalProjects.getByRole('heading')).toBeInViewport();
   });
   if (chatEnabled) await check('Chat opens on two pages, previews real local course notes and retains only in-page drafts', async () => {
     const response = await context.request.get(base + '/api/course'); assert.equal(response.status(), 200); assert.equal((await response.json()).answer_mode, 'sources', 'Paid model mode is outside this test');
